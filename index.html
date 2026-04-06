@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birch House — Fort Lauderdale</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300&display=swap" rel="stylesheet">
+
+  <style>
+    /* ─── Reset ─────────────────────────────────────────────── */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* ─── Tokens ─────────────────────────────────────────────── */
+    :root {
+      --bg:     #F0EAE0;
+      --text:   #27190D;
+      --muted:  #7B6A57;
+      --rule:   #C4B5A5;
+      --cream:  #F2EBE0;
+      --serif:  'Cormorant Garamond', Georgia, serif;
+      --sans:   'Jost', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 1.85;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── Header ─────────────────────────────────────────────── */
+    header {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 200;
+      padding: 28px 0;
+      display: flex;
+      justify-content: center;
+      transition: background 0.45s ease, box-shadow 0.45s ease;
+    }
+
+    header.scrolled {
+      background: rgba(240, 234, 224, 0.94);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 1px 0 rgba(196, 181, 165, 0.3);
+    }
+
+    .logo {
+      font-family: var(--sans);
+      font-weight: 200;
+      font-size: 11px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--cream);
+      transition: color 0.45s ease;
+    }
+
+    header.scrolled .logo { color: var(--text); }
+
+    /* ─── Hero ───────────────────────────────────────────────── */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 620px;
+      overflow: hidden;
+    }
+
+    .hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 38%;
+      filter: brightness(0.80) contrast(0.88) sepia(0.18) saturate(0.86);
+    }
+
+    .hero-veil {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(10, 6, 2, 0.06) 0%,
+        rgba(10, 6, 2, 0.00) 38%,
+        rgba(10, 6, 2, 0.48) 72%,
+        rgba(10, 6, 2, 0.70) 100%
+      );
+    }
+
+    .hero-text {
+      position: absolute;
+      bottom: 13%;
+      left: 0;
+      right: 0;
+      text-align: center;
+      color: var(--cream);
+    }
+
+    .hero-text h1 {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: clamp(46px, 6.5vw, 90px);
+      letter-spacing: 0.07em;
+      line-height: 1.05;
+      margin-bottom: 16px;
+    }
+
+    .hero-sub {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(15px, 1.7vw, 21px);
+      letter-spacing: 0.03em;
+      opacity: 0.80;
+      display: block;
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 38px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .scroll-line {
+      width: 1px;
+      height: 46px;
+      background: rgba(242, 235, 224, 0.32);
+      animation: breathe 2.4s ease-in-out infinite;
+    }
+
+    @keyframes breathe {
+      0%, 100% { opacity: 0.32; transform: scaleY(1);    }
+      50%       { opacity: 0.72; transform: scaleY(0.6); }
+    }
+
+    /* ─── Shared section shell ───────────────────────────────── */
+    .section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 130px 48px;
+    }
+
+    /* ─── Prose column ───────────────────────────────────────── */
+    .prose {
+      max-width: 580px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .prose p {
+      text-align: left;
+      margin-bottom: 1.5em;
+      color: var(--text);
+    }
+
+    .prose p:last-of-type { margin-bottom: 0; }
+
+    /* ─── Type hierarchy ─────────────────────────────────────── */
+    h2 {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: clamp(36px, 4.2vw, 58px);
+      letter-spacing: 0.04em;
+      line-height: 1.08;
+      margin-bottom: 10px;
+    }
+
+    .sub {
+      display: block;
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(15px, 1.5vw, 19px);
+      color: var(--muted);
+      letter-spacing: 0.025em;
+      margin-bottom: 52px;
+    }
+
+    .rule {
+      width: 36px;
+      height: 1px;
+      background: var(--rule);
+      margin: 0 auto 52px;
+    }
+
+    /* ─── Text links ─────────────────────────────────────────── */
+    .tlink {
+      display: inline-block;
+      margin-top: 52px;
+      font-family: var(--sans);
+      font-weight: 200;
+      font-size: 11px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 3px;
+      transition: color 0.22s, border-color 0.22s;
+    }
+
+    .tlink:hover {
+      color: var(--text);
+      border-color: var(--text);
+    }
+
+    /* ─── Suites — image-led layout ──────────────────────────── */
+    .suites-img-wrap {
+      width: 100%;
+      max-width: 780px;
+      margin-bottom: 64px;
+      overflow: hidden;
+    }
+
+    .suites-img-wrap img {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+      object-position: center 30%;
+      display: block;
+      filter: brightness(0.96) saturate(0.80) sepia(0.06);
+    }
+
+    /* ─── Location — split layout (transition page) ──────────── */
+    .location-section {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .loc-image {
+      flex: 0 0 54vh;
+      overflow: hidden;
+    }
+
+    .loc-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 55%;
+      display: block;
+      filter: brightness(0.86) contrast(0.90) sepia(0.10);
+    }
+
+    .loc-text {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 84px 48px;
+    }
+
+    .loc-text .prose { max-width: 520px; }
+
+    /* ─── Reservations ───────────────────────────────────────── */
+    .reservations-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 130px 48px;
+    }
+
+    .reservations-section .prose { max-width: 500px; }
+
+    .reservations-section p {
+      text-align: center;
+      color: var(--muted);
+      font-size: 16px;
+      margin-bottom: 1.3em;
+    }
+
+    /* ─── Buttons ────────────────────────────────────────────── */
+    .btn-row {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 52px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      font-family: var(--sans);
+      font-weight: 200;
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid;
+      transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+      cursor: pointer;
+    }
+
+    .btn-outline {
+      border-color: var(--rule);
+      color: var(--text);
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background: var(--text);
+      color: var(--bg);
+      border-color: var(--text);
+    }
+
+    .btn-filled {
+      border-color: var(--text);
+      background: var(--text);
+      color: var(--bg);
+    }
+
+    .btn-filled:hover {
+      background: transparent;
+      color: var(--text);
+    }
+
+    /* ─── Contact ────────────────────────────────────────────── */
+    .contact {
+      margin-top: 52px;
+      font-family: var(--sans);
+      font-weight: 200;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      line-height: 2.4;
+    }
+
+    .contact a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .contact a:hover { color: var(--text); }
+
+    /* ─── Footer ─────────────────────────────────────────────── */
+    footer {
+      padding: 38px 48px;
+      text-align: center;
+      border-top: 1px solid rgba(196, 181, 165, 0.28);
+    }
+
+    footer p {
+      font-family: var(--sans);
+      font-weight: 200;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header id="site-header">
+    <a href="#home" class="logo">Birch House</a>
+  </header>
+
+
+  <!-- ① HERO ─────────────────────────────────────────────────── -->
+  <section class="hero" id="home">
+    <img
+      src="images/birch_house_hero_16x9.png"
+      alt="Birch House — Fort Lauderdale Beach"
+      class="hero-img"
+    >
+    <div class="hero-veil"></div>
+    <div class="hero-text">
+      <h1>Birch House</h1>
+      <span class="hero-sub">A private house by the coast</span>
+    </div>
+    <div class="scroll-hint">
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+
+  <!-- ② THE HOUSE ─────────────────────────────────────────────── -->
+  <section class="section" id="house">
+    <div class="prose">
+      <h2>The House</h2>
+      <div class="rule"></div>
+      <p>The Club at Birch House is not a hotel in the traditional sense. It is a small coastal residence with just six suites, designed to feel relaxed, elegant, and quietly personal.</p>
+      <p>The scale allows for a different kind of stay. Mornings unfold at your own pace. Evenings are unhurried.</p>
+      <p>The atmosphere is calm, with an emphasis on space, light, and comfort rather than formality.</p>
+      <p>For more than two decades, The Pillars Hotel was known for its understated luxury and personal service. Birch House continues that philosophy in a more private and residential form.</p>
+      <p>This is a place for those who prefer intimacy over scale, and discretion over display.</p>
+      <a href="#suites" class="tlink">View the Suites</a>
+    </div>
+  </section>
+
+
+  <!-- ③ THE SUITES ────────────────────────────────────────────── -->
+  <section class="section" id="suites">
+    <div class="suites-img-wrap">
+      <img
+        src="images/Birch-House-Grand-Suite.jpg"
+        alt="The Suites at Birch House"
+      >
+    </div>
+    <div class="prose">
+      <h2>The Suites</h2>
+      <div class="rule"></div>
+      <p>Six suites. Each one designed with a sense of space that is increasingly rare.</p>
+      <p>The suites are intentionally generous in scale. Four junior suites offer over five hundred square feet of open, comfortable living, while two one-bedroom suites extend to approximately eleven hundred square feet, creating a true residential experience.</p>
+      <p>The proportions allow for a natural rhythm to the space. Areas to sit, to rest, and to unwind are distinct yet connected, with light and air moving easily throughout.</p>
+      <p>The bathrooms are equally considered — spacious, light-filled, and finished in clean white tones. Freestanding bathtubs and glass-enclosed showers create a sense of openness and comfort.</p>
+      <p>With only six suites, the experience remains calm, personal, and discrete.</p>
+      <a href="#reservations" class="tlink">Check Availability</a>
+    </div>
+  </section>
+
+
+  <!-- ④ THE EXPERIENCE ───────────────────────────────────────── -->
+  <section class="section" id="experience">
+    <div class="prose">
+      <h2>The Experience</h2>
+      <span class="sub">A slower way to begin the day</span>
+      <p>Mornings begin slowly, with light from the coast and the option to step out toward the beach just moments away. There is no schedule, only the rhythm you choose.</p>
+      <p>Afternoons move easily between the house and the nearby marina, where the energy of the water is present but never intrusive.</p>
+      <p>Evenings are calm and understated. The setting invites conversation, a glass of wine, or simply time to unwind in a space that feels private and removed.</p>
+      <p>A more intimate expression of the spirit that defined The Pillars.</p>
+      <a href="#location" class="tlink">The Location</a>
+    </div>
+  </section>
+
+
+  <!-- ⑤ THE LOCATION — transition ────────────────────────────── -->
+  <section class="location-section" id="location">
+    <div class="loc-image">
+      <img
+        src="images/flowers gate.jpg"
+        alt="Birch House entrance — Fort Lauderdale"
+      >
+    </div>
+    <div class="loc-text">
+      <div class="prose">
+        <h2>The Location</h2>
+        <span class="sub">Quietly positioned on Fort Lauderdale Beach</span>
+        <p>Birch House is set just steps from the beach, offering immediate access to the ocean while remaining tucked away from the busier areas nearby.</p>
+        <p>Located moments from the marina, the setting reflects the quiet movement of the water without ever feeling exposed or crowded. Restaurants, shops, and the energy of Fort Lauderdale are within easy reach, yet the house itself remains calm and discrete.</p>
+        <p>A setting that offers both connection and a sense of remove.</p>
+        <a href="#reservations" class="tlink">View Availability</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ⑥ RESERVATIONS — call to action ────────────────────────── -->
+  <section class="reservations-section" id="reservations">
+    <div class="prose">
+      <h2>Reservations</h2>
+      <span class="sub" style="margin-bottom: 42px;">A limited number of suites, thoughtfully held</span>
+      <p>With only six suites, availability is naturally limited. We recommend reserving in advance to secure your preferred dates.</p>
+      <p>Discover more about Birch House, explore the gallery, or proceed to availability.</p>
+      <div class="btn-row">
+        <a
+          href="https://pillarshotel.com/birch-house/"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-outline"
+        >View Photo Gallery</a>
+        <a
+          href="https://pillarshotel.com/birch-house/"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-filled"
+        >Check Availability</a>
+      </div>
+      <div class="contact">
+        <div><a href="mailto:reservations@birchhouse.com">reservations@birchhouse.com</a></div>
+        <div>+1 (xxx) xxx xxxx</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>Birch House &ensp;&middot;&ensp; Fort Lauderdale Beach &ensp;&middot;&ensp; From the creators of The Pillars Hotel</p>
+  </footer>
+
+
+  <script>
+    // Swap header between transparent (over hero) and filled (scrolled)
+    const header = document.getElementById('site-header');
+    const hero   = document.getElementById('home');
+
+    new IntersectionObserver(
+      ([entry]) => header.classList.toggle('scrolled', !entry.isIntersecting),
+      { threshold: 0.08 }
+    ).observe(hero);
+  </script>
+
+</body>
+</html>
