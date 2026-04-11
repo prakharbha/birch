@@ -57,6 +57,12 @@ export default function Header() {
 
       {/* Full-screen overlay menu */}
       <div className={`mobile-menu ${menuOpen ? 'mobile-menu--open' : ''}`} aria-hidden={!menuOpen}>
+        {/* Close button */}
+        <button className="mobile-menu-close" onClick={close} aria-label="Close menu">
+          <span className="close-bar" />
+          <span className="close-bar" />
+        </button>
+
         <div className="mobile-menu-inner">
 
           {/* Logo */}

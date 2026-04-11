@@ -490,6 +490,101 @@ footer p {
   justify-content: center;
 }
 
+/* ─── Suite gallery (multi-photo + text) ────────────────────── */
+.suite-gallery-row {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  align-items: start;
+  padding: 80px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 48px;
+  padding-right: 48px;
+  gap: 64px;
+}
+
+.suite-gallery-row--reverse {
+  direction: rtl;
+}
+
+.suite-gallery-row--reverse > * {
+  direction: ltr;
+}
+
+.suite-gallery-media {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.suite-gallery-main {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #e8e0d4;
+}
+
+.suite-gallery-img {
+  transition: opacity 0.3s ease;
+}
+
+.suite-gallery-thumbs {
+  display: flex;
+  gap: 8px;
+}
+
+.suite-thumb-btn {
+  position: relative;
+  flex: 1;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background: #e8e0d4;
+  opacity: 0.65;
+  transition: opacity 0.2s ease;
+}
+
+.suite-thumb-btn:hover,
+.suite-thumb-btn--active {
+  opacity: 1;
+}
+
+.suite-thumb-btn--active {
+  outline: 2px solid var(--text);
+  outline-offset: -2px;
+}
+
+.suite-gallery-text {
+  display: flex;
+  flex-direction: column;
+  padding-top: 16px;
+}
+
+.suite-gallery-text h2 {
+  margin-bottom: 10px;
+}
+
+.suite-gallery-text p {
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .suite-gallery-row {
+    grid-template-columns: 1fr;
+    direction: ltr;
+    padding: 48px 24px;
+    gap: 32px;
+  }
+
+  .suite-gallery-row--reverse {
+    direction: ltr;
+  }
+}
+
 /* ─── Suite rows (split image + text) ───────────────────────── */
 .suite-row {
   display: grid;
@@ -892,6 +987,35 @@ footer p {
   pointer-events: none;
   transition: opacity 0.45s ease;
 }
+
+/* Close button inside overlay */
+.mobile-menu-close {
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 0;
+}
+
+.close-bar {
+  display: block;
+  width: 28px;
+  height: 1.5px;
+  background: #ffffff;
+  position: absolute;
+}
+
+.close-bar:nth-child(1) { transform: rotate(45deg); }
+.close-bar:nth-child(2) { transform: rotate(-45deg); }
 
 .mobile-menu--open {
   opacity: 1;

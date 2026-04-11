@@ -1,20 +1,31 @@
 import Image from 'next/image'
 import Header from '@/components/Header'
+import SuiteGallery from '@/components/SuiteGallery'
 
 const suites = [
   {
     name: 'Junior Suite',
-    detail: 'Four available · From 500 sq ft',
-    desc: 'Open, light-filled rooms designed for comfort and ease. Each junior suite offers a generous living area, oversized windows, and a refined bathroom with a glass-enclosed shower.',
-    img: '/images/Birch-House-Grand-Suite.jpg',
-    imgPos: 'center 30%',
+    detail: 'Three available · At 525 sq ft',
+    desc: 'Open, light-filled rooms designed for comfort and ease. Each junior suite offers a generous living area, oversized windows, and a refined bathroom with a glass-enclosed shower and soaking tub.',
+    images: [
+      { src: '/images/bedroom birch house.jpg',       alt: 'Junior Suite bedroom',      pos: 'center 30%' },
+      { src: '/images/birch-01.jpg',                  alt: 'Junior Suite living area',  pos: 'center' },
+      { src: '/images/birch-02.jpg',                  alt: 'Junior Suite detail',       pos: 'center' },
+      { src: '/images/birch-05.jpg',                  alt: 'Junior Suite view',         pos: 'center' },
+      { src: '/images/Birch-House batroom.jpg',       alt: 'Junior Suite bathroom',     pos: 'center 30%' },
+    ],
   },
   {
     name: 'One-Bedroom Suite',
-    detail: 'Two available · From 1,100 sq ft',
+    detail: 'Two available · At 1,150 sq ft',
     desc: 'The largest accommodation at Birch House. A full separate bedroom, expansive living room, and a spa-like bathroom with freestanding bathtub and walk-in shower — a true residential experience.',
-    img: '/images/bedroom birch house.jpg',
-    imgPos: 'center 40%',
+    images: [
+      { src: '/images/Birch-House-Grand-Suite.jpg',   alt: 'One-Bedroom Suite salon',   pos: 'center' },
+      { src: '/images/Birch-House-Grand-Suite-1.jpg', alt: 'One-Bedroom Suite bedroom', pos: 'center 35%' },
+      { src: '/images/birch-08.jpg',                  alt: 'One-Bedroom Suite detail',  pos: 'center' },
+      { src: '/images/birch-09.jpg',                  alt: 'One-Bedroom Suite lounge',  pos: 'center' },
+      { src: '/images/birch-10.jpg',                  alt: 'One-Bedroom Suite bath',    pos: 'center' },
+    ],
   },
 ]
 
@@ -37,7 +48,7 @@ export default function SuitesPage() {
         <div className="hero-text">
           <span className="page-hero-label">Accommodation</span>
           <h1>The Suites</h1>
-          <span className="hero-sub">Six suites. Each one designed with a sense of space that is increasingly rare.</span>
+          <span className="hero-sub">Five suites. Each one designed with a sense of space that is increasingly rare.</span>
         </div>
       </section>
 
@@ -55,7 +66,7 @@ export default function SuitesPage() {
             create a sense of openness and calm.
           </p>
           <p>
-            With only six suites, the experience remains personal and discrete. This is
+            With only five suites, the experience remains personal and discrete. This is
             not a place of crowds or corridors.
           </p>
         </div>
@@ -63,23 +74,7 @@ export default function SuitesPage() {
 
       {/* ── SUITE TYPES ─────────────────────────────────────── */}
       {suites.map((suite, i) => (
-        <article key={suite.name} className={`suite-row ${i % 2 === 1 ? 'suite-row--reverse' : ''}`}>
-          <div className="suite-img-wrap">
-            <Image
-              src={suite.img}
-              alt={suite.name}
-              fill
-              className="suites-img"
-              style={{ objectFit: 'cover', objectPosition: suite.imgPos }}
-            />
-          </div>
-          <div className="suite-text">
-            <span className="suite-detail">{suite.detail}</span>
-            <h2>{suite.name}</h2>
-            <div className="rule rule--left" />
-            <p>{suite.desc}</p>
-          </div>
-        </article>
+        <SuiteGallery key={suite.name} suite={suite} reverse={i % 2 === 1} />
       ))}
 
       {/* ── BATHROOM FEATURE ─────────────────────────────────── */}
@@ -112,22 +107,17 @@ export default function SuitesPage() {
           <h2>Reserve Your Suite</h2>
           <div className="rule" />
           <p>
-            With only six suites, we recommend reserving in advance to secure your
+            With only five suites, we recommend reserving in advance to secure your
             preferred dates and suite type.
           </p>
-          <div className="btn-row">
-            <a
-              href="https://pillarshotel.com/birch-house/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-filled"
-            >
-              Check Availability
-            </a>
-            <a href="/reservations" className="btn btn-outline">
-              Reservations
-            </a>
-          </div>
+          <a
+            href="https://pillarshotel.com/birch-house/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="tlink"
+          >
+            Check Availability
+          </a>
         </div>
       </section>
 

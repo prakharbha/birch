@@ -5,15 +5,15 @@ import Link from 'next/link'
 
 const ZoomParallax = dynamic(() => import('./ZoomParallax'), { ssr: false })
 
-// 7 images for the zoom parallax slots — using the Pillars gallery URLs
+// 7 images for the zoom parallax slots — local Birch House photography
 const parallaxImages = [
-  'https://pillarshotel.com/wp-content/uploads/2023/04/61.jpg',
-  'https://pillarshotel.com/wp-content/uploads/2023/04/91.jpg',
-  'https://pillarshotel.com/wp-content/uploads/2020/10/ss4.jpg',
-  'https://pillarshotel.com/wp-content/uploads/2023/10/for-photo-gallery-1.jpg',
-  'https://pillarshotel.com/wp-content/uploads/2023/04/81.jpg',
-  'https://pillarshotel.com/wp-content/uploads/2023/04/41.jpg',
-  'https://pillarshotel.com/wp-content/uploads/2023/10/photo-gallery-2.jpg',
+  '/images/birch-05.jpg',
+  '/images/birch-06.jpg',
+  '/images/birch-10.jpg',
+  '/images/birch-12.jpg',
+  '/images/birch-16.jpg',
+  '/images/birch-18.jpg',
+  '/images/birch-20.jpg',
 ]
 
 export default function PhotoGallery() {

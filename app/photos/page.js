@@ -2,40 +2,37 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Header from '@/components/Header'
 
-// Full image set — carousel images + local Birch House images
+// All Birch House photos — local files downloaded from pillarshotel.com/birch-house/
+// plus existing on-property photography
 const allPhotos = [
-  // Local Birch House photography
-  { src: '/images/birch_house_hero_16x9.png',     alt: 'Birch House exterior',           category: 'Exterior' },
-  { src: '/images/flowers gate.jpg',               alt: 'Entrance gate and garden',       category: 'Exterior' },
-  { src: '/images/Birch-House-Grand-Suite.jpg',    alt: 'Grand Suite living room',        category: 'Suites'   },
-  { src: '/images/Birch-House-Grand-Suite-1.jpg',  alt: 'Grand Suite bedroom',            category: 'Suites'   },
-  { src: '/images/bedroom birch house.jpg',        alt: 'Suite bedroom',                  category: 'Suites'   },
-  { src: '/images/girl on bed birch house.jpg',    alt: 'Suite — morning light',          category: 'Suites'   },
-  { src: '/images/Birch-House batroom.jpg',        alt: 'Suite bathroom',                 category: 'Suites'   },
-  { src: '/images/corner table.jpg',               alt: 'Corner table',                   category: 'Interior' },
-
-  // Pillars / Birch House gallery images
-  { src: 'https://pillarshotel.com/wp-content/uploads/2023/04/61.jpg',              alt: 'Birch House', category: 'Gallery' },
-  { src: 'https://pillarshotel.com/wp-content/uploads/2020/10/ss2.jpg',             alt: 'Birch House', category: 'Gallery' },
-  { src: 'https://pillarshotel.com/wp-content/uploads/2023/04/91.jpg',              alt: 'Birch House', category: 'Gallery' },
-  { src: 'https://pillarshotel.com/wp-content/uploads/2020/10/ss4.jpg',             alt: 'Birch House', category: 'Gallery' },
-  { src: 'https://pillarshotel.com/wp-content/uploads/2019/12/s2.jpg',              alt: 'Birch House', category: 'Gallery' },
-  { src: 'https://pillarshotel.com/wp-content/uploads/2019/12/s4.jpg',              alt: 'Birch House', category: 'Gallery' },
-  { src: 'https://pillarshotel.com/wp-content/uploads/2019/12/s6.jpg',              alt: 'Birch House', category: 'Gallery' },
-  { src: 'https://pillarshotel.com/wp-content/uploads/2019/12/s10.jpg',             alt: 'Birch House', category: 'Gallery' },
-  { src: 'https://pillarshotel.com/wp-content/uploads/2023/10/for-photo-gallery-1.jpg', alt: 'Birch House', category: 'Gallery' },
-  { src: 'https://pillarshotel.com/wp-content/uploads/2023/04/10-11.jpg',           alt: 'Birch House', category: 'Gallery' },
-  { src: 'https://pillarshotel.com/wp-content/uploads/2023/04/81.jpg',              alt: 'Birch House', category: 'Gallery' },
-  { src: 'https://pillarshotel.com/wp-content/uploads/2023/04/1-21.jpg',            alt: 'Birch House', category: 'Gallery' },
-  { src: 'https://pillarshotel.com/wp-content/uploads/2023/04/41.jpg',              alt: 'Birch House', category: 'Gallery' },
-  { src: 'https://pillarshotel.com/wp-content/uploads/2023/04/51.jpg',              alt: 'Birch House', category: 'Gallery' },
-  { src: 'https://pillarshotel.com/wp-content/uploads/2023/04/71.jpg',              alt: 'Birch House', category: 'Gallery' },
-  { src: 'https://pillarshotel.com/wp-content/uploads/2023/10/photo-gallery-2.jpg', alt: 'Birch House', category: 'Gallery' },
-  { src: 'https://pillarshotel.com/wp-content/uploads/2023/04/31.jpg',              alt: 'Birch House', category: 'Gallery' },
-  { src: 'https://pillarshotel.com/wp-content/uploads/2023/05/for-gallery-21.jpg',  alt: 'Birch House', category: 'Gallery' },
+  { src: '/images/birch-01.jpg',                  alt: 'Birch House' },
+  { src: '/images/birch-02.jpg',                  alt: 'Birch House' },
+  { src: '/images/birch-03.jpg',                  alt: 'Birch House' },
+  { src: '/images/birch-04.jpg',                  alt: 'Birch House' },
+  { src: '/images/birch-05.jpg',                  alt: 'Birch House' },
+  { src: '/images/birch-06.jpg',                  alt: 'Birch House' },
+  { src: '/images/birch-07.jpg',                  alt: 'Birch House' },
+  { src: '/images/birch-08.jpg',                  alt: 'Birch House' },
+  { src: '/images/birch-09.jpg',                  alt: 'Birch House' },
+  { src: '/images/birch-10.jpg',                  alt: 'Birch House' },
+  { src: '/images/birch-11.jpg',                  alt: 'Birch House' },
+  { src: '/images/birch-12.jpg',                  alt: 'Birch House' },
+  { src: '/images/birch-13.jpg',                  alt: 'Birch House' },
+  { src: '/images/birch-14.jpg',                  alt: 'Birch House' },
+  { src: '/images/birch-15.jpg',                  alt: 'Birch House' },
+  { src: '/images/birch-16.jpg',                  alt: 'Birch House' },
+  { src: '/images/birch-17.jpg',                  alt: 'Birch House' },
+  { src: '/images/birch-18.jpg',                  alt: 'Birch House' },
+  { src: '/images/birch-19.jpg',                  alt: 'Birch House' },
+  { src: '/images/birch-20.jpg',                  alt: 'Birch House' },
+  { src: '/images/birch_house_hero_16x9.png',     alt: 'Birch House exterior' },
+  { src: '/images/flowers gate.jpg',              alt: 'Entrance gate and garden' },
+  { src: '/images/Birch-House-Grand-Suite.jpg',   alt: 'Grand Suite living room' },
+  { src: '/images/Birch-House-Grand-Suite-1.jpg', alt: 'Grand Suite bedroom' },
+  { src: '/images/bedroom birch house.jpg',       alt: 'Suite bedroom' },
+  { src: '/images/girl on bed birch house.jpg',   alt: 'Suite — morning light' },
+  { src: '/images/Birch-House batroom.jpg',       alt: 'Suite bathroom' },
 ]
-
-const categories = ['All', 'Exterior', 'Suites', 'Interior', 'Gallery']
 
 export default function PhotosPage() {
   return (
@@ -65,7 +62,7 @@ export default function PhotosPage() {
         <div className="prose">
           <p>
             A visual record of the house — its rooms, its light, its garden, and its
-            setting by the coast. Six suites, one gate, and the Atlantic just beyond.
+            setting by the coast. Five suites, one gate, and the Atlantic just beyond.
           </p>
         </div>
       </section>
@@ -79,26 +76,13 @@ export default function PhotosPage() {
               className={`photo-item ${i % 7 === 0 || i % 7 === 4 ? 'photo-item--tall' : ''}`}
             >
               <div className="photo-item-inner">
-                {photo.src.startsWith('http') ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={photo.src}
-                    alt={photo.alt}
-                    className="photo-img"
-                    loading="lazy"
-                  />
-                ) : (
-                  <Image
-                    src={photo.src}
-                    alt={photo.alt}
-                    fill
-                    className="photo-img"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                )}
-                <div className="photo-overlay">
-                  <span className="photo-cat">{photo.category}</span>
-                </div>
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  className="photo-img"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
               </div>
             </div>
           ))}
@@ -111,15 +95,15 @@ export default function PhotosPage() {
           <h2>Reserve Your Suite</h2>
           <div className="rule" />
           <p>
-            With only six suites, we recommend reserving in advance.
+            With only five suites, we recommend reserving in advance.
           </p>
-          <div className="btn-row">
-            <Link href="/suites" className="btn btn-outline">View the Suites</Link>
+          <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <Link href="/suites" className="tlink">View the Suites</Link>
             <a
               href="https://pillarshotel.com/birch-house/"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-filled"
+              className="tlink"
             >
               Check Availability
             </a>
