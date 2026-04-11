@@ -6,13 +6,12 @@ const suites = [
   {
     name: 'Junior Suite',
     detail: 'Three available · At 525 sq ft',
-    desc: 'Open, light-filled rooms designed for comfort and ease. Each junior suite offers a generous living area, oversized windows, and a refined bathroom with a glass-enclosed shower and soaking tub.',
+    desc: 'Open, light-filled rooms designed for comfort and ease. Each junior suite offers a generous living area, oversized windows, and a refined bathroom with a glass-enclosed shower and soaking tub. An ADA-accessible option is available.',
     images: [
-      { src: '/images/bedroom birch house.jpg',       alt: 'Junior Suite bedroom',      pos: 'center 30%' },
-      { src: '/images/birch-01.jpg',                  alt: 'Junior Suite living area',  pos: 'center' },
-      { src: '/images/birch-02.jpg',                  alt: 'Junior Suite detail',       pos: 'center' },
-      { src: '/images/birch-05.jpg',                  alt: 'Junior Suite view',         pos: 'center' },
-      { src: '/images/Birch-House batroom.jpg',       alt: 'Junior Suite bathroom',     pos: 'center 30%' },
+      { src: '/images/jr-hero.jpg', alt: 'Junior Suite',          pos: 'center' },
+      { src: '/images/jr-1.jpg',    alt: 'Junior Suite bedroom',  pos: 'center' },
+      { src: '/images/jr-2.jpg',    alt: 'Junior Suite bathroom', pos: 'center' },
+      { src: '/images/jr-3.jpg',    alt: 'Junior Suite detail',   pos: 'center' },
     ],
   },
   {
@@ -20,11 +19,11 @@ const suites = [
     detail: 'Two available · At 1,150 sq ft',
     desc: 'The largest accommodation at Birch House. A full separate bedroom, expansive living room, and a spa-like bathroom with freestanding bathtub and walk-in shower — a true residential experience.',
     images: [
-      { src: '/images/Birch-House-Grand-Suite.jpg',   alt: 'One-Bedroom Suite salon',   pos: 'center' },
-      { src: '/images/Birch-House-Grand-Suite-1.jpg', alt: 'One-Bedroom Suite bedroom', pos: 'center 35%' },
-      { src: '/images/birch-08.jpg',                  alt: 'One-Bedroom Suite detail',  pos: 'center' },
-      { src: '/images/birch-09.jpg',                  alt: 'One-Bedroom Suite lounge',  pos: 'center' },
-      { src: '/images/birch-10.jpg',                  alt: 'One-Bedroom Suite bath',    pos: 'center' },
+      { src: '/images/gs-hero.jpg', alt: 'One-Bedroom Suite',          pos: 'center' },
+      { src: '/images/gs-1.jpg',    alt: 'One-Bedroom Suite bedroom',  pos: 'center' },
+      { src: '/images/gs-2.jpg',    alt: 'One-Bedroom Suite salon',    pos: 'center' },
+      { src: '/images/gs-3.jpg',    alt: 'One-Bedroom Suite bathroom', pos: 'center' },
+      { src: '/images/gs-4.jpg',    alt: 'One-Bedroom Suite detail',   pos: 'center' },
     ],
   },
 ]
@@ -37,7 +36,7 @@ export default function SuitesPage() {
       {/* ── PAGE HERO ───────────────────────────────────────── */}
       <section className="page-hero">
         <Image
-          src="/images/Birch-House-Grand-Suite-1.jpg"
+          src="/images/gs-hero.jpg"
           alt="The Suites at Birch House"
           fill
           priority
