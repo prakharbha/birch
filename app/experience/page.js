@@ -92,7 +92,7 @@ export default function ExperiencePage() {
           <div className="rule" />
           <p>
             The Club at Birch House is not a hotel in the traditional sense. It is a small
-            coastal residence with just six suites, designed for those who prefer intimacy
+            coastal residence with just five suites, designed for those who prefer intimacy
             over scale, and discretion over display.
           </p>
           <p>

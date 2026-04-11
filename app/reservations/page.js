@@ -4,7 +4,7 @@ import Header from '@/components/Header'
 const faqs = [
   {
     q: 'How far in advance should I reserve?',
-    a: 'With only six suites, Birch House fills quickly during peak season (November through April). We recommend reserving at least four to six weeks in advance for preferred dates.',
+    a: 'With only five suites, Birch House fills quickly during peak season (November through April). We recommend reserving at least four to six weeks in advance for preferred dates.',
   },
   {
     q: 'What is the check-in and check-out time?',
@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     q: 'Can the house be reserved exclusively?',
-    a: 'Exclusive use of all six suites can be arranged for private groups or events. Please contact us directly to discuss.',
+    a: 'Exclusive use of all five suites can be arranged for private groups or events. Please contact us directly to discuss.',
   },
 ]
 
@@ -47,7 +47,7 @@ export default function ReservationsPage() {
       <section className="page-intro">
         <div className="prose">
           <p>
-            With only six suites, availability is naturally limited. We recommend reserving
+            With only five suites, availability is naturally limited. We recommend reserving
             in advance to secure your preferred dates. Our team is available to assist with
             any special requests or arrangements to ensure a seamless stay.
           </p>

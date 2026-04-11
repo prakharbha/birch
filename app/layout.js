@@ -19,7 +19,7 @@ const jost = Jost({
 export const metadata = {
   title: 'Birch House — Fort Lauderdale',
   description:
-    'A private house by the coast. Six suites on Fort Lauderdale Beach, from the creators of The Pillars Hotel.',
+    'A private house by the coast. Five suites on Fort Lauderdale Beach, from the creators of The Pillars Hotel.',
 }
 
 export default function RootLayout({ children }) {

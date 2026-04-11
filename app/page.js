@@ -10,7 +10,7 @@ const previews = [
     imgPos: 'center 30%',
     label: 'Accommodation',
     title: 'The Suites',
-    body: 'Six generously scaled suites, each designed to feel residential rather than transient. Spacious living areas, oversized bathrooms, and an atmosphere of calm throughout.',
+    body: 'Five generously scaled suites, each designed to feel residential rather than transient. Spacious living areas, oversized bathrooms, and an atmosphere of calm throughout.',
     cta: 'View the Suites',
   },
   {
@@ -37,7 +37,7 @@ const previews = [
     imgPos: 'center 40%',
     label: 'Availability',
     title: 'Reservations',
-    body: 'With only six suites, availability is naturally limited. We recommend reserving in advance to secure your preferred dates.',
+    body: 'With only five suites, availability is naturally limited. We recommend reserving in advance to secure your preferred dates.',
     cta: 'Check Availability',
   },
 ]
@@ -74,7 +74,7 @@ export default function Home() {
           <div className="rule" />
           <p>
             The Club at Birch House is not a hotel in the traditional sense. It is a
-            small coastal residence with just six suites, designed to feel relaxed,
+            small coastal residence with just five suites, designed to feel relaxed,
             elegant, and quietly personal.
           </p>
           <p>
