@@ -28,7 +28,7 @@ export default function LocationPage() {
       {/* ── PAGE HERO ───────────────────────────────────────── */}
       <section className="page-hero">
         <Image
-          src="/images/flowers gate.jpg"
+          src="/images/birch-18.jpg"
           alt="Birch House — Fort Lauderdale Beach"
           fill
           priority

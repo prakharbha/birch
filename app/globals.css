@@ -1027,8 +1027,10 @@ footer p {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 40px 32px;
+  padding: 100px 32px 48px;
   width: 100%;
+  min-height: 100%;
+  overflow-y: auto;
 }
 
 /* Logo inside menu */
@@ -1056,7 +1058,7 @@ footer p {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  margin-bottom: 64px;
+  margin-bottom: 40px;
 }
 
 .mobile-nav-link {
@@ -1085,12 +1087,164 @@ footer p {
 .mobile-menu-footer {
   font-family: var(--sans);
   font-weight: 200;
-  font-size: 26px;
+  font-size: 17px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #ffffff;
-  position: absolute;
-  bottom: 36px;
+  color: rgba(242, 235, 224, 0.45);
+  position: static;
   text-align: center;
   padding: 0 32px;
+  margin-top: 16px;
+}
+
+/* ─── Mobile responsive (≤ 768px) ───────────────────────────── */
+@media (max-width: 768px) {
+
+  /* Header */
+  header {
+    padding: 0 24px;
+  }
+
+  /* Page hero */
+  .page-hero {
+    height: 60vh;
+    min-height: 340px;
+  }
+
+  /* Page intro */
+  .page-intro {
+    padding: 56px 24px;
+  }
+
+  /* Homepage intro */
+  .intro-section {
+    padding: 48px 24px;
+  }
+
+  /* Homepage preview cards — stack vertically */
+  .preview-card {
+    grid-template-columns: 1fr;
+    direction: ltr;
+    min-height: auto;
+  }
+
+  .preview-card--reverse {
+    direction: ltr;
+  }
+
+  .preview-img-wrap {
+    height: 300px;
+  }
+
+  .preview-body {
+    padding: 48px 24px;
+  }
+
+  /* Suite rows — stack vertically */
+  .suite-row {
+    grid-template-columns: 1fr;
+    direction: ltr;
+    min-height: auto;
+  }
+
+  .suite-row--reverse {
+    direction: ltr;
+  }
+
+  .suite-img-wrap {
+    height: 300px;
+  }
+
+  .suite-text {
+    padding: 48px 24px;
+  }
+
+  /* Feature full-bleed — stack vertically */
+  .feature-full {
+    grid-template-columns: 1fr;
+    direction: ltr;
+    min-height: auto;
+  }
+
+  .feature-full-img-wrap {
+    height: 300px;
+  }
+
+  .feature-full-text {
+    padding: 48px 24px;
+  }
+
+  /* Location feature — stack vertically */
+  .location-feature {
+    grid-template-columns: 1fr;
+    direction: ltr;
+    min-height: auto;
+  }
+
+  .location-feature-img {
+    height: 300px;
+  }
+
+  .location-feature-address {
+    padding: 48px 24px;
+  }
+
+  /* Highlights grid — single column */
+  .highlights-section {
+    padding: 56px 24px;
+  }
+
+  .highlights-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* Booking section */
+  .booking-section {
+    padding: 64px 24px;
+  }
+
+  /* Contact grid — single column */
+  .contact-section {
+    padding: 64px 24px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* FAQ section */
+  .faq-section {
+    padding: 64px 24px;
+  }
+
+  /* Page CTA */
+  .page-cta {
+    padding: 72px 24px;
+  }
+
+  /* Photos grid — 2 columns on mobile */
+  .photos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 200px;
+  }
+
+  /* Gallery section */
+  .gallery-header {
+    padding: 40px 24px 0;
+  }
+
+  .gallery-footer {
+    padding: 32px 24px 56px;
+  }
+
+  /* Mobile menu footer — make smaller on small screens */
+  .mobile-menu-logo {
+    font-size: 22px;
+  }
+
+  .mobile-nav-link {
+    font-size: clamp(28px, 9vw, 48px);
+  }
 }

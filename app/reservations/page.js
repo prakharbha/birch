@@ -28,12 +28,12 @@ export default function ReservationsPage() {
       {/* ── PAGE HERO ───────────────────────────────────────── */}
       <section className="page-hero">
         <Image
-          src="/images/Birch-House-Grand-Suite.jpg"
+          src="/images/birch-18.jpg"
           alt="Birch House Reservations"
           fill
           priority
           className="hero-img"
-          style={{ objectFit: 'cover', objectPosition: 'center 30%' }}
+          style={{ objectFit: 'cover', objectPosition: 'center 50%' }}
         />
         <div className="hero-veil" />
         <div className="hero-text">
