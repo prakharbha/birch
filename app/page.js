@@ -68,7 +68,7 @@ export default function Home() {
       </section>
 
       {/* ── INTRO ────────────────────────────────────────────── */}
-      <section className="intro-section" style={{ background: 'linear-gradient(to right, #F4F1EC 0%, #F4F1EC 33.33%, #F2EFE9 33.33%, #F2EFE9 66.66%, #EFECE6 66.66%, #EFECE6 100%)' }}>
+      <section className="intro-section">
         <div className="prose">
           <h2>A Different Kind of Stay</h2>
           <div className="rule" />

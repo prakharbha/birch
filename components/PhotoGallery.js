@@ -2,6 +2,7 @@
 
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
+import MobileGallery from './MobileGallery'
 
 const ZoomParallax = dynamic(() => import('./ZoomParallax'), { ssr: false })
 
@@ -24,10 +25,13 @@ export default function PhotoGallery() {
         <p className="gallery-eyebrow">Birch House</p>
         <h2>The Gallery</h2>
         <div className="rule" />
-        <p className="gallery-scroll-hint">Scroll to explore</p>
+        <p className="gallery-scroll-hint gallery-scroll-hint--desktop">Scroll to explore</p>
       </div>
 
-      {/* Zoom parallax — exact same effect as personal-gallery-cv */}
+      {/* Mobile: simple grid gallery */}
+      <MobileGallery images={parallaxImages} />
+
+      {/* Desktop: Zoom parallax */}
       <ZoomParallax images={parallaxImages} />
 
       {/* Link to full photos page */}

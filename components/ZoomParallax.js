@@ -31,7 +31,7 @@ export default function ZoomParallax({ images }) {
   const scales = [scale4, scale5, scale6, scale5, scale6, scale8, scale9]
 
   return (
-    <div ref={container} style={{ position: 'relative', height: '300vh' }}>
+    <div ref={container} style={{ position: 'relative', height: '300vh' }} className="zoom-container">
       <div className="zoom-sticky">
         {images.slice(0, 7).map((src, i) => (
           <motion.div
