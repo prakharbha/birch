@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 const faqs = [
   {
@@ -94,11 +95,11 @@ export default function ReservationsPage() {
             <div className="rule rule--left" />
             <p>For reservations and general enquiries:</p>
             <p>
-              <a href="mailto:reservations@birchhouse.com" className="contact-link">
-                reservations@birchhouse.com
+              <a href="mailto:guestservices@birchhouseclub.com" className="contact-link">
+                guestservices@birchhouseclub.com
               </a>
             </p>
-            <p>+1 (xxx) xxx xxxx</p>
+            <p>+1 (954) 467-9639</p>
           </div>
           <div className="contact-block">
             <h3>Special Requests</h3>
@@ -113,9 +114,9 @@ export default function ReservationsPage() {
             <h3>The Address</h3>
             <div className="rule rule--left" />
             <p>
-              66 Birch Road<br />
-              Fort Lauderdale Beach<br />
-              Florida, FL 33304
+              66, S Birch Road<br />
+              Fort Lauderdale<br />
+              Florida, FL 33316
             </p>
           </div>
         </div>
@@ -137,12 +138,7 @@ export default function ReservationsPage() {
         </div>
       </section>
 
-      <footer>
-        <p>
-          Birch House &ensp;&middot;&ensp; Fort Lauderdale Beach &ensp;&middot;&ensp;
-          From the creators of The Pillars Hotel
-        </p>
-      </footer>
+      <Footer />
     </>
   )
 }

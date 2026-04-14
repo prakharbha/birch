@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 // All Birch House photos — local files downloaded from pillarshotel.com/birch-house/
 // plus existing on-property photography
@@ -111,12 +112,7 @@ export default function PhotosPage() {
         </div>
       </section>
 
-      <footer>
-        <p>
-          Birch House &ensp;&middot;&ensp; Fort Lauderdale Beach &ensp;&middot;&ensp;
-          From the creators of The Pillars Hotel
-        </p>
-      </footer>
+      <Footer />
     </>
   )
 }

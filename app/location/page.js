@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 const highlights = [
   {
@@ -74,13 +75,14 @@ export default function LocationPage() {
             <h2>Find Us</h2>
             <div className="rule" />
             <p>
-              66 Birch Road<br />
-              Fort Lauderdale Beach<br />
-              Florida, FL 33304
+              66, S Birch Road<br />
+              Fort Lauderdale<br />
+              Florida, FL 33316
             </p>
             <p>
-              Three minutes from The Pillars Hotel &amp; Club.<br />
-              Twenty minutes from Fort Lauderdale International Airport.
+              Two minute walk to the Beach <br />
+              Two minutes walk to Las Olas Marina <br />
+              Fifteen minutes drive from Fort Lauderdale International Airport
             </p>
           </div>
         </div>
@@ -126,12 +128,6 @@ export default function LocationPage() {
         </div>
       </section>
 
-      <footer>
-        <p>
-          Birch House &ensp;&middot;&ensp; Fort Lauderdale Beach &ensp;&middot;&ensp;
-          From the creators of The Pillars Hotel
-        </p>
-      </footer>
-    </>
+      <Footer />    </>
   )
 }

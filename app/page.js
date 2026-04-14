@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 import PhotoGallery from '@/components/PhotoGallery'
 
 const previews = [
@@ -80,7 +81,7 @@ export default function Home() {
           <p>
             For more than two decades, The Pillars Hotel was known for its understated
             luxury and personal service. Birch House continues that philosophy in a
-            more private and residential form — for those who prefer intimacy over
+            more private and residential form, for those who prefer intimacy over
             scale, and discretion over display.
           </p>
         </div>
@@ -114,12 +115,7 @@ export default function Home() {
       </section>
 
       {/* ── FOOTER ───────────────────────────────────────────── */}
-      <footer>
-        <p>
-          Birch House &ensp;&middot;&ensp; Fort Lauderdale Beach &ensp;&middot;&ensp;
-          From the creators of The Pillars Hotel
-        </p>
-      </footer>
+      <Footer />
     </>
   )
 }

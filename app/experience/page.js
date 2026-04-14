@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 const moments = [
   {
@@ -104,12 +105,7 @@ export default function ExperiencePage() {
         </div>
       </section>
 
-      <footer>
-        <p>
-          Birch House &ensp;&middot;&ensp; Fort Lauderdale Beach &ensp;&middot;&ensp;
-          From the creators of The Pillars Hotel
-        </p>
-      </footer>
+      <Footer />
     </>
   )
 }

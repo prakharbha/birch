@@ -7,12 +7,7 @@
 
 /* ─── Design tokens ──────────────────────────────────────────── */
 :root {
-  /* Light Stone Grey Options */
-  --stone-1: #EAEAE8; /* Option 1: Pale, airy stone */
-  --stone-2: #E5E3E0; /* Option 2: Warm greige stone */
-  --stone-3: #DDDCDE; /* Option 3: Cool, slightly darker slate stone */
-
-  --bg:     var(--stone-1); /* Currently using Option 1 */
+  --bg:     rgb(229, 227, 224);
   --text:   #000000;
   --muted:  #000000;
   --rule:   #8A7865;
@@ -28,7 +23,7 @@ body {
   color: var(--text);
   font-family: var(--serif);
   font-weight: 300;
-  font-size: 19px;
+  font-size: 21px;
   line-height: 1.85;
   -webkit-font-smoothing: antialiased;
 }
