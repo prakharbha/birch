@@ -60,7 +60,7 @@ export default function Home() {
         <div className="hero-veil" />
         <div className="hero-text">
           <h1>Birch House</h1>
-          <span className="hero-sub">A private house by the coast</span>
+          <span className="hero-sub">A Private Coastal Club &amp; Retreat</span>
         </div>
         <div className="scroll-hint">
           <div className="scroll-line" />
@@ -68,7 +68,7 @@ export default function Home() {
       </section>
 
       {/* ── INTRO ────────────────────────────────────────────── */}
-      <section className="intro-section">
+      <section className="intro-section" style={{ background: 'linear-gradient(to right, #F4F1EC 0%, #F4F1EC 33.33%, #F2EFE9 33.33%, #F2EFE9 66.66%, #EFECE6 66.66%, #EFECE6 100%)' }}>
         <div className="prose">
           <h2>A Different Kind of Stay</h2>
           <div className="rule" />
