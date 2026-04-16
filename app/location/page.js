@@ -5,11 +5,11 @@ import Footer from '@/components/Footer'
 const highlights = [
   {
     heading: 'The Beach',
-    body: 'Fort Lauderdale Beach is steps from the front gate. The Atlantic is immediate — a constant presence without being overwhelming. Mornings on the sand, or simply the knowledge that it is there.',
+    body: 'Fort Lauderdale Beach is steps from the front gate. The Atlantic is immediate, a constant presence without being overwhelming. Mornings on the sand, or simply the knowledge that it is there.',
   },
   {
     heading: 'The Marina',
-    body: 'The Intracoastal Waterway and the Fort Lauderdale marina are moments away. The energy of the water — the movement of boats, the light on the canal — is part of the character of the place.',
+    body: 'The Intracoastal Waterway and the Fort Lauderdale marina are moments away. The energy of the water, the movement of boats, the light on the canal, is part of the character of the place.',
   },
   {
     heading: 'The City',

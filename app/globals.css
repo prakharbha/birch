@@ -710,6 +710,10 @@ footer p {
 }
 
 .location-feature-address p {
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 1.9;
   text-align: left;
 }
 
@@ -784,9 +788,11 @@ footer p {
 
 /* ─── Contact section ────────────────────────────────────────── */
 .contact-section {
-  padding: 100px 48px;
+  padding: 100px 48px 0;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
 }
 
 .contact-grid {
@@ -795,6 +801,27 @@ footer p {
   gap: 56px 80px;
   max-width: 960px;
   width: 100%;
+}
+
+.contact-grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px 80px;
+  max-width: 960px;
+  width: 100%;
+  margin-bottom: 56px;
+}
+
+.contact-grid-full {
+  max-width: 960px;
+  width: 100%;
+}
+
+.contact-grid-full--tinted {
+  background: #E8E0D4;
+  padding: 48px 56px;
+  max-width: 100%;
+  width: 100vw;
 }
 
 .contact-block h3 {
@@ -1377,9 +1404,14 @@ footer p {
     padding: 64px 24px;
   }
 
-  .contact-grid {
+  .contact-grid,
+  .contact-grid-2col {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+
+  .contact-grid-2col {
+    margin-bottom: 40px;
   }
 
   /* FAQ section */

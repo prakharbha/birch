@@ -10,7 +10,7 @@ const faqs = [
   },
   {
     q: 'What is the check-in and check-out time?',
-    a: 'Check-in is from 3:00 PM. Check-out is by 11:00 AM. Early check-in or late check-out may be arranged based on availability — please contact us in advance.',
+    a: 'Check-in is from 3:00 PM. Check-out is by 11:00 AM. Early check-in or late check-out may be arranged based on availability, please contact us in advance.',
   },
   {
     q: 'Is Birch House suitable for extended stays?',
@@ -90,7 +90,7 @@ export default function ReservationsPage() {
 
       {/* ── CONTACT ─────────────────────────────────────────── */}
       <section className="contact-section">
-        <div className="contact-grid">
+        <div className="contact-grid-2col">
           <div className="contact-block">
             <h3>Reservations</h3>
             <div className="rule rule--left" />
@@ -100,15 +100,8 @@ export default function ReservationsPage() {
                 guestservices@birchhouseclub.com
               </a>
             </p>
-            <p>+1 (954) 467-9639</p>
-          </div>
-          <div className="contact-block">
-            <h3>Special Requests</h3>
-            <div className="rule rule--left" />
             <p>
-              For special requests, extended stays, or exclusive use enquiries,
-              our team is available to assist. We aim to respond to all enquiries
-              within 24 hours.
+              <a href="tel:+19544679639" className="contact-link">+1 (954) 467-9639</a>
             </p>
           </div>
           <div className="contact-block">
@@ -118,6 +111,17 @@ export default function ReservationsPage() {
               66, S Birch Road<br />
               Fort Lauderdale<br />
               Florida, FL 33316
+            </p>
+          </div>
+        </div>
+        <div className="contact-grid-full contact-grid-full--tinted">
+          <div className="contact-block">
+            <h3>Special Requests</h3>
+            <div className="rule rule--left" />
+            <p>
+              For special requests, extended stays, or exclusive use enquiries,
+              our team is available to assist. We aim to respond to all enquiries
+              within 24 hours.
             </p>
           </div>
         </div>

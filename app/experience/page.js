@@ -6,23 +6,23 @@ const moments = [
   {
     time: 'Morning',
     headline: 'A Slower Start',
-    body: 'Mornings begin slowly, with light from the coast. The option to step out toward the beach is just moments away. There is no schedule — only the rhythm you choose. Coffee brought to the room, or taken on the terrace as the day begins to unfold.',
-    img: '/images/girl on bed birch house.jpg',
-    imgPos: 'center 20%',
+    body: 'Mornings begin slowly, with light from the coast. The option to step out toward the beach is just moments away. There is no schedule, only the rhythm you choose. Coffee brought to the room, or taken on the terrace as the day begins to unfold.',
+    img: '/images/morning.webp',
+    imgPos: 'center 30%',
   },
   {
     time: 'Afternoon',
     headline: 'Between the House and the Water',
-    body: 'Afternoons move easily between the house and the nearby marina. The energy of the water is present but never intrusive. The beach is a short walk. The restaurants and shops of Fort Lauderdale are within easy reach when you want them.',
-    img: '/images/Birch-House-Grand-Suite.jpg',
+    body: 'Afternoons move easily between the house, the pool, and the nearby marina. The presence of the water is constant, though never intrusive. The beach is a short walk. The restaurants and shops of Fort Lauderdale.',
+    img: '/images/afternoon.webp',
     imgPos: 'center 40%',
   },
   {
     time: 'Evening',
     headline: 'Unhurried Evenings',
-    body: 'Evenings are calm and understated. The setting invites conversation, a glass of wine, or simply time to unwind in a space that feels private and removed from the world. There is no performance here — only comfort.',
-    img: '/images/corner table.jpg',
-    imgPos: 'center 45%',
+    body: 'Evenings are calm and understated. The setting invites conversation, a glass of wine, or simply time to unwind in a space that feels private and removed from the world. There is no performance here, only comfort.',
+    img: '/images/evening.webp',
+    imgPos: 'center 40%',
   },
 ]
 
@@ -55,12 +55,13 @@ export default function ExperiencePage() {
           <p>
             Birch House was conceived as an alternative to the conventional hotel stay.
             The scale is intentionally small. The atmosphere is intentionally calm. What
-            results is a kind of stay that is increasingly difficult to find — one defined
+            results is a kind of stay that is increasingly difficult to find, one defined
             by space, quiet, and genuine personal attention.
           </p>
           <p>
-            This is a more intimate expression of the spirit that has defined The Pillars
-            Hotel for over two decades.
+            For more than two decades, The Pillars Hotel was known for its understated luxury
+            and personal service. Birch House continues that philosophy in a more private and
+            residential form, for those who prefer intimacy over scale, and discretion over display.
           </p>
         </div>
       </section>

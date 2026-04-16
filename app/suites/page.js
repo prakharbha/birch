@@ -18,7 +18,7 @@ const suites = [
   {
     name: 'One-Bedroom Suite',
     detail: 'Two available · At 1,150 sq ft',
-    desc: 'The largest accommodation at Birch House. A full separate bedroom, expansive living room, and a spa-like bathroom with freestanding bathtub and walk-in shower — a true residential experience.',
+    desc: 'The largest accommodation at Birch House. A full separate bedroom, expansive living room, and a spa-like bathroom with freestanding bathtub and walk-in shower, a true residential experience.',
     images: [
       { src: '/images/gs-hero.jpg', alt: 'One-Bedroom Suite',          pos: 'center' },
       { src: '/images/gs-1.jpg',    alt: 'One-Bedroom Suite bedroom',  pos: 'center' },
@@ -57,7 +57,7 @@ export default function SuitesPage() {
         <div className="prose">
           <p>
             At Birch House, the suites are intentionally generous in scale. The proportions
-            allow for a natural rhythm to the space — areas to sit, to rest, and to unwind
+            allow for a natural rhythm to the space, areas to sit, to rest, and to unwind
             are distinct yet connected, with light and air moving easily throughout.
           </p>
           <p>
