@@ -25,7 +25,7 @@ export default function PhotoGallery() {
         <p className="gallery-eyebrow">Birch House</p>
         <h2>The Gallery</h2>
         <div className="rule" />
-        <p className="gallery-scroll-hint gallery-scroll-hint--desktop">Scroll to explore</p>
+        <p className="gallery-scroll-hint gallery-scroll-hint--desktop">Click any image to explore</p>
       </div>
 
       {/* Mobile: simple grid gallery */}

@@ -29,14 +29,14 @@ export default function LocationPage() {
       {/* ── PAGE HERO ───────────────────────────────────────── */}
       <section className="page-hero">
         <Image
-          src="/images/birch-18.jpg"
+          src="/images/beach-sand-road.webp"
           alt="Birch House — Fort Lauderdale Beach"
           fill
           priority
           className="hero-img"
           style={{ objectFit: 'cover', objectPosition: 'center 50%' }}
         />
-        <div className="hero-veil" />
+        <div className="page-hero-veil" />
         <div className="hero-text">
           <span className="page-hero-label">Fort Lauderdale Beach</span>
           <h1>The Location</h1>

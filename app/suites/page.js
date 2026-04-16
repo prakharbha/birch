@@ -44,7 +44,7 @@ export default function SuitesPage() {
           className="hero-img"
           style={{ objectFit: 'cover', objectPosition: 'center 35%' }}
         />
-        <div className="hero-veil" />
+        <div className="page-hero-veil" />
         <div className="hero-text">
           <span className="page-hero-label">Accommodation</span>
           <h1>The Suites</h1>

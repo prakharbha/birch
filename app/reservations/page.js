@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import FaqAccordion from '@/components/FaqAccordion'
 
 const faqs = [
   {
@@ -29,14 +30,14 @@ export default function ReservationsPage() {
       {/* ── PAGE HERO ───────────────────────────────────────── */}
       <section className="page-hero">
         <Image
-          src="/images/birch-18.jpg"
+          src="/images/Tranquil-poolside-relaxation-area.webp"
           alt="Birch House Reservations"
           fill
           priority
           className="hero-img"
           style={{ objectFit: 'cover', objectPosition: 'center 50%' }}
         />
-        <div className="hero-veil" />
+        <div className="page-hero-veil" />
         <div className="hero-text">
           <span className="page-hero-label">Availability</span>
           <h1>Reservations</h1>
@@ -125,17 +126,10 @@ export default function ReservationsPage() {
       {/* ── FAQ ─────────────────────────────────────────────── */}
       <section className="faq-section">
         <div className="prose" style={{ marginBottom: '64px' }}>
-          <h2>Questions</h2>
+          <h2>Frequently Asked Questions</h2>
           <div className="rule" />
         </div>
-        <div className="faq-list">
-          {faqs.map(f => (
-            <div key={f.q} className="faq-item">
-              <h3>{f.q}</h3>
-              <p>{f.a}</p>
-            </div>
-          ))}
-        </div>
+        <FaqAccordion faqs={faqs} />
       </section>
 
       <Footer />

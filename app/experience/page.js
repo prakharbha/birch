@@ -41,7 +41,7 @@ export default function ExperiencePage() {
           className="hero-img"
           style={{ objectFit: 'cover', objectPosition: 'center 20%' }}
         />
-        <div className="hero-veil" />
+        <div className="page-hero-veil" />
         <div className="hero-text">
           <span className="page-hero-label">Your Stay</span>
           <h1>The Experience</h1>
