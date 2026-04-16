@@ -16,8 +16,8 @@ const previews = [
   },
   {
     href: '/experience',
-    img: '/images/girl on bed birch house.jpg',
-    imgPos: 'center 20%',
+    img: '/images/morning.webp',
+    imgPos: 'center 30%',
     label: 'Your Stay',
     title: 'The Experience',
     body: 'Mornings by the coast. Unhurried evenings. No schedule, only the rhythm you choose. A slower, more deliberate way to be somewhere.',
@@ -25,7 +25,7 @@ const previews = [
   },
   {
     href: '/location',
-    img: '/images/flowers gate.jpg',
+    img: '/images/beach-sand-road.webp',
     imgPos: 'center 50%',
     label: 'Fort Lauderdale Beach',
     title: 'The Location',
@@ -34,8 +34,8 @@ const previews = [
   },
   {
     href: '/reservations',
-    img: '/images/corner table.jpg',
-    imgPos: 'center 40%',
+    img: '/images/Tranquil-poolside-relaxation-area.webp',
+    imgPos: 'center 50%',
     label: 'Availability',
     title: 'Reservations',
     body: 'With only five suites, availability is naturally limited. We recommend reserving in advance to secure your preferred dates.',
