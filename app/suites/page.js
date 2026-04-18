@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import SuiteGallery from '@/components/SuiteGallery'
+import BookingButton from '@/components/BookingButton'
 
 const suites = [
   {
@@ -110,14 +111,7 @@ export default function SuitesPage() {
             With only five suites, we recommend reserving in advance to secure your
             preferred dates and suite type.
           </p>
-          <a
-            href="https://pillarshotel.com/birch-house/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="tlink b3"
-          >
-            Check Availability
-          </a>
+          <BookingButton className="tlink">Check Availability</BookingButton>
         </div>
       </section>
 

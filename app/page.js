@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import PhotoGallery from '@/components/PhotoGallery'
+import BookingButton from '@/components/BookingButton'
 
 const previews = [
   {
@@ -109,7 +110,10 @@ export default function Home() {
               <h2 className="preview-title">{p.title}</h2>
               <div className="rule rule--left" />
               <p className="preview-text">{p.body}</p>
-              <a href={p.href} className={`tlink${p.btnClass ? ` ${p.btnClass}` : ''}`}>{p.cta}</a>
+              {p.btnClass
+                ? <BookingButton className="tlink">{p.cta}</BookingButton>
+                : <a href={p.href} className="tlink">{p.cta}</a>
+              }
             </div>
           </article>
         ))}

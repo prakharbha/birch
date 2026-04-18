@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import BookingButton from './BookingButton'
 
 export default function SuiteGallery({ suite, reverse, btnClass }) {
   const [active, setActive] = useState(0)
@@ -49,14 +50,7 @@ export default function SuiteGallery({ suite, reverse, btnClass }) {
         <h2>{suite.name}</h2>
         <div className="rule rule--left" />
         <p>{suite.desc}</p>
-        <a
-          href="https://pillarshotel.com/birch-house/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`tlink${btnClass ? ` ${btnClass}` : ''}`}
-        >
-          Reserve
-        </a>
+        <BookingButton className="tlink">Reserve</BookingButton>
       </div>
     </article>
   )

@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FaqAccordion from '@/components/FaqAccordion'
+import BookingButton from '@/components/BookingButton'
 
 const faqs = [
   {
@@ -67,14 +68,7 @@ export default function ReservationsPage() {
               or contact us directly for assistance with your reservation.
             </p>
             <div className="btn-row">
-              <a
-                href="https://pillarshotel.com/birch-house/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-filled b4"
-              >
-                Check Availability
-              </a>
+              <BookingButton className="btn btn-filled">Check Availability</BookingButton>
               <a
                 href="https://pillarshotel.com/birch-house/"
                 target="_blank"

@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import BookingButton from '@/components/BookingButton'
 
 const highlights = [
   {
@@ -116,14 +117,7 @@ export default function LocationPage() {
           </p>
           <div className="btn-row">
             <a href="/suites" className="btn btn-outline">View the Suites</a>
-            <a
-              href="https://pillarshotel.com/birch-house/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-filled b5"
-            >
-              Check Availability
-            </a>
+            <BookingButton className="btn btn-filled">Check Availability</BookingButton>
           </div>
         </div>
       </section>
