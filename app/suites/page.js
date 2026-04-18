@@ -74,7 +74,7 @@ export default function SuitesPage() {
 
       {/* ── SUITE TYPES ─────────────────────────────────────── */}
       {suites.map((suite, i) => (
-        <SuiteGallery key={suite.name} suite={suite} reverse={i % 2 === 1} />
+        <SuiteGallery key={suite.name} suite={suite} reverse={i % 2 === 1} btnClass={`b${i + 1}`} />
       ))}
 
       {/* ── BATHROOM FEATURE ─────────────────────────────────── */}
@@ -114,7 +114,7 @@ export default function SuitesPage() {
             href="https://pillarshotel.com/birch-house/"
             target="_blank"
             rel="noopener noreferrer"
-            className="tlink"
+            className="tlink b3"
           >
             Check Availability
           </a>

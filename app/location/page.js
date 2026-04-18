@@ -120,7 +120,7 @@ export default function LocationPage() {
               href="https://pillarshotel.com/birch-house/"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-filled"
+              className="btn btn-filled b5"
             >
               Check Availability
             </a>

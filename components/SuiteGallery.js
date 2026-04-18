@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 
-export default function SuiteGallery({ suite, reverse }) {
+export default function SuiteGallery({ suite, reverse, btnClass }) {
   const [active, setActive] = useState(0)
 
   return (
@@ -53,7 +53,7 @@ export default function SuiteGallery({ suite, reverse }) {
           href="https://pillarshotel.com/birch-house/"
           target="_blank"
           rel="noopener noreferrer"
-          className="tlink"
+          className={`tlink${btnClass ? ` ${btnClass}` : ''}`}
         >
           Reserve
         </a>

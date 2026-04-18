@@ -40,6 +40,7 @@ const previews = [
     title: 'Reservations',
     body: 'With only five suites, availability is naturally limited. We recommend reserving in advance to secure your preferred dates.',
     cta: 'Check Availability',
+    btnClass: 'b6',
   },
 ]
 
@@ -108,7 +109,7 @@ export default function Home() {
               <h2 className="preview-title">{p.title}</h2>
               <div className="rule rule--left" />
               <p className="preview-text">{p.body}</p>
-              <a href={p.href} className="tlink">{p.cta}</a>
+              <a href={p.href} className={`tlink${p.btnClass ? ` ${p.btnClass}` : ''}`}>{p.cta}</a>
             </div>
           </article>
         ))}
