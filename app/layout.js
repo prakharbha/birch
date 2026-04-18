@@ -68,7 +68,6 @@ const LH_THEME = JSON.stringify({
   },
 })
 
-// Safely embed the theme string inside an inline JS string literal
 const LH_THEME_ESCAPED = LH_THEME.replace(/\\/g, '\\\\').replace(/'/g, "\\'")
 
 export default function RootLayout({ children }) {
@@ -77,16 +76,39 @@ export default function RootLayout({ children }) {
       <body>
         {children}
 
-        {/*
-          Inject the Life House SDK as a real ES module.
-          Using dangerouslySetInnerHTML so this runs as a plain <script> in the
-          server-rendered HTML (no React hydration delay), and it in turn creates
-          the <script type="module"> which the browser loads correctly.
-        */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
 (function() {
+  // Install a property trap on history.pushState / replaceState so that
+  // ANY function installed there (including Next.js's router patch) is
+  // automatically wrapped to normalise empty-string states to {}.
+  // This runs before any framework code, so the booking engine bundle
+  // always captures our wrapped version when it initialises.
+  function normState(s) {
+    return (s === '' || s === null || s === undefined) ? {} : s;
+  }
+  function wrap(fn) {
+    return function(state, title, url) {
+      return fn.call(history, normState(state), title, url);
+    };
+  }
+
+  var _push    = wrap(history.pushState.bind(history));
+  var _replace = wrap(history.replaceState.bind(history));
+
+  Object.defineProperty(history, 'pushState', {
+    get: function() { return _push; },
+    set: function(fn) { _push = wrap(fn); },
+    configurable: true
+  });
+  Object.defineProperty(history, 'replaceState', {
+    get: function() { return _replace; },
+    set: function(fn) { _replace = wrap(fn); },
+    configurable: true
+  });
+
+  // Inject the Life House booking engine SDK as a proper ES module.
   if (document.getElementById('lh-sdk')) return;
   var s = document.createElement('script');
   s.type = 'module';
