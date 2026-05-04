@@ -1,35 +1,26 @@
 'use client'
 
-function waitForBookingEngine(callback, maxWaitMs = 10000) {
+function waitForMews(callback, maxWaitMs = 10000) {
   const start = Date.now()
   const interval = setInterval(() => {
-    const fn = window.openBookingFlow
-    const renderer = window.renderBookingEngine
-    // SDK sets renderBookingEngine = ()=>null initially (very short).
-    // The real function from assets/index-*.js is much longer.
-    const ready =
-      typeof fn === 'function' &&
-      typeof renderer === 'function' &&
-      renderer.toString().length > 20
-
-    if (ready) {
+    if (typeof window.Mews?.D?.open === 'function') {
       clearInterval(interval)
       callback()
     } else if (Date.now() - start > maxWaitMs) {
       clearInterval(interval)
-      if (typeof fn === 'function') callback()
+      console.warn('Mews Distributor did not load in time')
     }
   }, 200)
 }
 
-export default function BookingButton({ className = 'tlink', children }) {
+export default function BookingButton({ className = 'btn btn-filled', children }) {
   const handleClick = (e) => {
     e.preventDefault()
-    waitForBookingEngine(() => {
+    waitForMews(() => {
       try {
-        window.openBookingFlow()
+        window.Mews.D.open()
       } catch (err) {
-        console.error('Booking engine error:', err)
+        console.error('Mews Distributor error:', err)
       }
     })
   }
