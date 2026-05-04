@@ -98,7 +98,7 @@ export default function PillarsBanner() {
           font-weight: 400;
           letter-spacing: 0.08em;
           text-transform: uppercase;
-          color: #8b7355;
+          color: #000;
           margin: 0 0 20px;
         }
 
@@ -107,7 +107,7 @@ export default function PillarsBanner() {
           font-size: clamp(26px, 3vw, 32px);
           font-weight: 300;
           font-style: italic;
-          color: #2a1f0f;
+          color: #000;
           letter-spacing: 0.04em;
           line-height: 1.25;
           margin: 0 0 24px;
@@ -117,7 +117,7 @@ export default function PillarsBanner() {
           font-family: var(--serif), 'Cormorant Garamond', Georgia, serif;
           font-size: clamp(18px, 2vw, 21px);
           font-weight: 400;
-          color: #5a4a34;
+          color: #000;
           letter-spacing: 0.01em;
           line-height: 1.85;
           margin: 0;
@@ -126,23 +126,23 @@ export default function PillarsBanner() {
         .pillars-modal__cta {
           display: inline-block;
           margin-top: 32px;
-          font-family: var(--serif), 'Cormorant Garamond', Georgia, serif;
-          font-size: clamp(18px, 2vw, 21px);
-          font-weight: 400;
-          letter-spacing: 0.04em;
-          color: #2a1f0f;
-          text-decoration: none;
-          background: none;
-          border: none;
-          border-bottom: 1px solid rgba(42, 31, 15, 0.35);
-          padding: 0 0 3px;
+          font-family: var(--sans), 'Jost', sans-serif;
+          font-size: 13px;
+          font-weight: 300;
+          letter-spacing: 0.22em;
+          text-transform: uppercase;
+          color: #faf6ef;
+          background: #2a1f0f;
+          border: 1px solid #2a1f0f;
+          padding: 14px 36px;
           cursor: pointer;
-          transition: border-color 0.25s ease, color 0.25s ease;
+          text-decoration: none;
+          transition: background 0.25s ease, color 0.25s ease;
         }
 
         .pillars-modal__cta:hover {
-          color: #8b7355;
-          border-color: rgba(139, 115, 85, 0.6);
+          background: transparent;
+          color: #2a1f0f;
         }
 
         .pillars-modal__close {
