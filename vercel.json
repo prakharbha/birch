@@ -1,0 +1,88 @@
+{
+  "redirects": [
+    {
+      "has": [{ "type": "host", "value": "(?:www\\.)?pillarshotel\\.com" }],
+      "source": "/accommodation/:path*",
+      "destination": "https://birchhouseclub.com/suites",
+      "permanent": true
+    },
+    {
+      "has": [{ "type": "host", "value": "(?:www\\.)?pillarshotel\\.com" }],
+      "source": "/dining/:path*",
+      "destination": "https://birchhouseclub.com/experience",
+      "permanent": true
+    },
+    {
+      "has": [{ "type": "host", "value": "(?:www\\.)?pillarshotel\\.com" }],
+      "source": "/photos/:path*",
+      "destination": "https://birchhouseclub.com/photos",
+      "permanent": true
+    },
+    {
+      "has": [{ "type": "host", "value": "(?:www\\.)?pillarshotel\\.com" }],
+      "source": "/contact/:path*",
+      "destination": "https://birchhouseclub.com/location",
+      "permanent": true
+    },
+    {
+      "has": [{ "type": "host", "value": "(?:www\\.)?pillarshotel\\.com" }],
+      "source": "/connect/:path*",
+      "destination": "https://birchhouseclub.com/location",
+      "permanent": true
+    },
+    {
+      "has": [{ "type": "host", "value": "(?:www\\.)?pillarshotel\\.com" }],
+      "source": "/offers/:path*",
+      "destination": "https://birchhouseclub.com/reservations",
+      "permanent": true
+    },
+    {
+      "has": [{ "type": "host", "value": "(?:www\\.)?pillarshotel\\.com" }],
+      "source": "/hotel-policy/:path*",
+      "destination": "https://birchhouseclub.com/",
+      "permanent": true
+    },
+    {
+      "has": [{ "type": "host", "value": "(?:www\\.)?pillarshotel\\.com" }],
+      "source": "/terms-and-conditions/:path*",
+      "destination": "https://birchhouseclub.com/",
+      "permanent": true
+    },
+    {
+      "has": [{ "type": "host", "value": "(?:www\\.)?pillarshotel\\.com" }],
+      "source": "/birch-house/:path*",
+      "destination": "https://birchhouseclub.com/",
+      "permanent": true
+    },
+    {
+      "has": [{ "type": "host", "value": "(?:www\\.)?pillarshotel\\.com" }],
+      "source": "/club/:path*",
+      "destination": "https://birchhouseclub.com/",
+      "permanent": true
+    },
+    {
+      "has": [{ "type": "host", "value": "(?:www\\.)?pillarshotel\\.com" }],
+      "source": "/newsletter/:path*",
+      "destination": "https://birchhouseclub.com/",
+      "permanent": true
+    },
+    {
+      "has": [{ "type": "host", "value": "(?:www\\.)?pillarshotel\\.com" }],
+      "source": "/blog/:path*",
+      "destination": "https://birchhouseclub.com/",
+      "permanent": true
+    },
+    {
+      "has": [{ "type": "host", "value": "(?:www\\.)?pillarshotel\\.com" }],
+      "source": "/a-new-chapter/:path*",
+      "destination": "https://birchhouseclub.com/",
+      "permanent": true
+    },
+    {
+      "has": [{ "type": "host", "value": "(?:www\\.)?pillarshotel\\.com" }],
+      "source": "/:path*",
+      "destination": "https://birchhouseclub.com/:path*",
+      "permanent": true
+    }
+  ]
+}

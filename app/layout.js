@@ -1,5 +1,6 @@
 import { Cormorant_Garamond, Jost } from 'next/font/google'
 import './globals.css'
+import PillarsBanner from '../components/PillarsBanner'
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -74,6 +75,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${cormorant.variable} ${jost.variable}`}>
       <body>
+        <PillarsBanner />
         {children}
 
         <script
