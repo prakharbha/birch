@@ -25,11 +25,9 @@ export default function PillarsBanner() {
   }, [])
 
   function dismiss() {
+    sessionStorage.setItem('pillars_banner_dismissed', '1')
     setAnimating(false)
-    setTimeout(() => {
-      sessionStorage.setItem('pillars_banner_dismissed', '1')
-      setVisible(false)
-    }, 350)
+    setTimeout(() => setVisible(false), 350)
   }
 
   if (!visible) return null
@@ -105,23 +103,23 @@ export default function PillarsBanner() {
         }
 
         .pillars-modal__heading {
-          font-family: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
-          font-size: clamp(22px, 3vw, 28px);
+          font-family: var(--serif), 'Cormorant Garamond', Georgia, serif;
+          font-size: clamp(26px, 3vw, 32px);
           font-weight: 300;
           font-style: italic;
           color: #2a1f0f;
-          letter-spacing: 0.01em;
-          line-height: 1.3;
+          letter-spacing: 0.04em;
+          line-height: 1.25;
           margin: 0 0 24px;
         }
 
         .pillars-modal__text {
-          font-family: var(--font-jost), 'Jost', sans-serif;
-          font-size: 13px;
-          font-weight: 300;
+          font-family: var(--serif), 'Cormorant Garamond', Georgia, serif;
+          font-size: clamp(18px, 2vw, 21px);
+          font-weight: 400;
           color: #5a4a34;
-          letter-spacing: 0.05em;
-          line-height: 1.75;
+          letter-spacing: 0.01em;
+          line-height: 1.85;
           margin: 0;
         }
 
