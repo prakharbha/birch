@@ -134,15 +134,16 @@ export default function PillarsBanner() {
           color: #faf6ef;
           background: #2a1f0f;
           border: 1px solid #2a1f0f;
-          padding: 14px 36px;
+          padding: 10px 20px;
+          font-weight: bold;
           cursor: pointer;
           text-decoration: none;
           transition: background 0.25s ease, color 0.25s ease;
         }
 
         .pillars-modal__cta:hover {
-          background: transparent;
-          color: #2a1f0f;
+          background: #4a3520;
+          border-color: #4a3520;
         }
 
         .pillars-modal__close {
@@ -153,10 +154,10 @@ export default function PillarsBanner() {
           border: none;
           cursor: pointer;
           padding: 6px;
-          color: #8b7355;
-          font-size: 22px;
+          color: #000;
+          font-size: 44px;
           line-height: 1;
-          opacity: 0.5;
+          opacity: 0.7;
           transition: opacity 0.2s ease;
           font-family: var(--font-jost), sans-serif;
           font-weight: 200;
