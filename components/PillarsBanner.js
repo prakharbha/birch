@@ -59,7 +59,7 @@ export default function PillarsBanner() {
           background: #faf6ef;
           max-width: 520px;
           width: 100%;
-          padding: 56px 52px 48px;
+          padding: 30px;
           text-align: center;
           transform: translateY(24px) scale(0.97);
           transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
@@ -72,25 +72,6 @@ export default function PillarsBanner() {
           opacity: 1;
         }
 
-        /* Top decorative rule */
-        .pillars-modal::before {
-          content: '';
-          display: block;
-          width: 48px;
-          height: 1px;
-          background: rgba(139, 115, 85, 0.5);
-          margin: 0 auto 32px;
-        }
-
-        /* Bottom decorative rule */
-        .pillars-modal::after {
-          content: '';
-          display: block;
-          width: 48px;
-          height: 1px;
-          background: rgba(139, 115, 85, 0.5);
-          margin: 32px auto 0;
-        }
 
         .pillars-modal__eyebrow {
           font-family: var(--serif), 'Cormorant Garamond', Georgia, serif;
@@ -169,7 +150,7 @@ export default function PillarsBanner() {
 
         @media (max-width: 480px) {
           .pillars-modal {
-            padding: 44px 32px 36px;
+            padding: 30px;
           }
         }
       `}</style>
