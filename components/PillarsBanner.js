@@ -93,10 +93,10 @@ export default function PillarsBanner() {
         }
 
         .pillars-modal__eyebrow {
-          font-family: var(--font-jost), 'Jost', sans-serif;
-          font-size: 10px;
-          font-weight: 300;
-          letter-spacing: 0.2em;
+          font-family: var(--serif), 'Cormorant Garamond', Georgia, serif;
+          font-size: clamp(18px, 2vw, 21px);
+          font-weight: 400;
+          letter-spacing: 0.08em;
           text-transform: uppercase;
           color: #8b7355;
           margin: 0 0 20px;
@@ -126,15 +126,17 @@ export default function PillarsBanner() {
         .pillars-modal__cta {
           display: inline-block;
           margin-top: 32px;
-          font-family: var(--font-jost), 'Jost', sans-serif;
-          font-size: 10.5px;
-          font-weight: 300;
-          letter-spacing: 0.18em;
-          text-transform: uppercase;
+          font-family: var(--serif), 'Cormorant Garamond', Georgia, serif;
+          font-size: clamp(18px, 2vw, 21px);
+          font-weight: 400;
+          letter-spacing: 0.04em;
           color: #2a1f0f;
           text-decoration: none;
+          background: none;
+          border: none;
           border-bottom: 1px solid rgba(42, 31, 15, 0.35);
-          padding-bottom: 2px;
+          padding: 0 0 3px;
+          cursor: pointer;
           transition: border-color 0.25s ease, color 0.25s ease;
         }
 
@@ -199,9 +201,9 @@ export default function PillarsBanner() {
             forward the spirit of personal service and understated elegance.
           </p>
 
-          <a className="pillars-modal__cta" href="/" onClick={dismiss}>
+          <button className="pillars-modal__cta" onClick={dismiss}>
             We invite you to discover Birch House
-          </a>
+          </button>
         </div>
       </div>
     </>
