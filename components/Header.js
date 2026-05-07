@@ -8,7 +8,7 @@ const links = [
   { label: 'The Suites',     href: '/suites'       },
   { label: 'The Experience', href: '/experience'   },
   { label: 'The Location',   href: '/location'     },
-  { label: 'Photos',         href: '/photos'       },
+  { label: 'Gallery',        href: '/photos'       },
   { label: 'Reservations',   href: '/reservations' },
 ]
 
@@ -37,7 +37,7 @@ export default function Header() {
 
         {/* Desktop nav */}
         <nav className="nav">
-          {links.slice(0, 4).map(({ label, href }) => (
+          {links.slice(0, 5).map(({ label, href }) => (
             <Link key={href} href={href} className="nav-link">{label}</Link>
           ))}
           <Link href="/reservations" className="nav-cta">Reservations</Link>

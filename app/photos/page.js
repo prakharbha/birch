@@ -25,17 +25,14 @@ const allPhotos = [
   { src: '/images/birch-17.jpg',                  alt: 'Birch House' },
   { src: '/images/birch-18.jpg',                  alt: 'Birch House' },
   { src: '/images/birch-19.jpg',                  alt: 'Birch House' },
-  { src: '/images/birch-20.jpg',                  alt: 'Birch House' },
   { src: '/images/Canal-walkway-in-Fort-Lauderdale.webp',      alt: 'Canal walkway, Fort Lauderdale' },
   { src: '/images/a1a-night.webp',                             alt: 'A1A at night' },
   { src: '/images/beach-sand-road.webp',                       alt: 'Fort Lauderdale Beach' },
   { src: '/images/Tranquil-poolside-relaxation-area.webp',    alt: 'Birch House pool' },
   { src: '/images/birch_house_hero_16x9.png',                 alt: 'Birch House exterior' },
   { src: '/images/flowers gate.jpg',              alt: 'Entrance gate and garden' },
-  { src: '/images/Birch-House-Grand-Suite.jpg',   alt: 'Grand Suite living room' },
-  { src: '/images/Birch-House-Grand-Suite-1.jpg', alt: 'Grand Suite bedroom' },
+  { src: '/images/Birch-House-Grand-Suite.jpg',   alt: 'Grand Suite' },
   { src: '/images/bedroom birch house.jpg',       alt: 'Suite bedroom' },
-  { src: '/images/girl on bed birch house.jpg',   alt: 'Suite — morning light' },
   { src: '/images/Birch-House batroom.jpg',       alt: 'Suite bathroom' },
 ]
 
