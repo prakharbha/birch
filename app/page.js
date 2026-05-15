@@ -60,11 +60,7 @@ export default function Home() {
           className="hero-img"
           style={{ objectFit: 'cover', objectPosition: 'center 38%' }}
         />
-        <div className="hero-veil" />
-        <div className="hero-text">
-          <h1>Birch House</h1>
-          <span className="hero-sub">A Private Coastal Club &amp; Retreat</span>
-        </div>
+        <h1 className="sr-only">Birch House</h1>
         <div className="scroll-hint">
           <div className="scroll-line" />
         </div>

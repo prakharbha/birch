@@ -2,13 +2,14 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const links = [
   { label: 'Home',           href: '/'             },
   { label: 'The Suites',     href: '/suites'       },
   { label: 'The Experience', href: '/experience'   },
   { label: 'The Location',   href: '/location'     },
-  { label: 'Gallery',        href: '/photos'       },
+  { label: 'Photos',         href: '/photos'       },
   { label: 'Reservations',   href: '/reservations' },
 ]
 
@@ -33,11 +34,19 @@ export default function Header() {
   return (
     <>
       <header className={scrolled ? 'scrolled' : ''}>
-        <Link href="/" className="logo" onClick={close}>Birch House</Link>
+        <Link href="/" onClick={close} aria-label="Birch House — Home" style={{ flexShrink: 0, lineHeight: 0 }}>
+          <Image
+            src="/images/Birch-house-logo.webp"
+            alt="Birch House"
+            height={88}
+            width={196}
+            style={{ display: 'block', objectFit: 'contain' }}
+          />
+        </Link>
 
         {/* Desktop nav */}
         <nav className="nav">
-          {links.slice(0, 5).map(({ label, href }) => (
+          {links.slice(0, 4).map(({ label, href }) => (
             <Link key={href} href={href} className="nav-link">{label}</Link>
           ))}
           <Link href="/reservations" className="nav-cta">Reservations</Link>
