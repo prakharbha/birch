@@ -8,8 +8,8 @@ const links = [
   { label: 'Home',           href: '/'             },
   { label: 'The Suites',     href: '/suites'       },
   { label: 'The Experience', href: '/experience'   },
+  { label: 'Gallery',        href: '/photos'       },
   { label: 'The Location',   href: '/location'     },
-  { label: 'Photos',         href: '/photos'       },
   { label: 'Reservations',   href: '/reservations' },
 ]
 
@@ -36,17 +36,17 @@ export default function Header() {
       <header className={scrolled ? 'scrolled' : ''}>
         <Link href="/" onClick={close} aria-label="Birch House — Home" style={{ flexShrink: 0, lineHeight: 0 }}>
           <Image
-            src="/images/Birch-house-logo.webp"
+            src="/images/Birch-House-Logo-Aqua.webp"
             alt="Birch House"
             height={88}
-            width={196}
+            width={203}
             style={{ display: 'block', objectFit: 'contain' }}
           />
         </Link>
 
         {/* Desktop nav */}
         <nav className="nav">
-          {links.slice(0, 4).map(({ label, href }) => (
+          {links.slice(0, 5).map(({ label, href }) => (
             <Link key={href} href={href} className="nav-link">{label}</Link>
           ))}
           <Link href="/reservations" className="nav-cta">Reservations</Link>
