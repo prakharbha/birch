@@ -4,6 +4,12 @@ import Footer from '@/components/Footer'
 import SuiteGallery from '@/components/SuiteGallery'
 import BookingButton from '@/components/BookingButton'
 
+export const metadata = {
+  title: 'The Suites — Junior & One-Bedroom',
+  description: 'Five generously scaled suites, 525–1,150 sq ft, steps from Fort Lauderdale Beach. View Junior and One-Bedroom suite options at Birch House.',
+  alternates: { canonical: 'https://birchhouseclub.com/suites' },
+}
+
 const suites = [
   {
     name: 'Junior Suite',
@@ -42,6 +48,7 @@ export default function SuitesPage() {
           alt="The Suites at Birch House"
           fill
           priority
+          sizes="100vw"
           className="hero-img"
           style={{ objectFit: 'cover', objectPosition: 'center 35%' }}
         />
@@ -85,6 +92,7 @@ export default function SuitesPage() {
             src="/images/Birch-House batroom.jpg"
             alt="Birch House bathroom"
             fill
+            sizes="(max-width: 768px) 100vw, 50vw"
             className="suites-img"
             style={{ objectFit: 'cover', objectPosition: 'center 30%' }}
           />

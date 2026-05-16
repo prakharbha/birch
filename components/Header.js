@@ -45,7 +45,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="nav">
+        <nav className="nav" aria-label="Main navigation">
           {links.slice(0, 5).map(({ label, href }) => (
             <Link key={href} href={href} className="nav-link">{label}</Link>
           ))}

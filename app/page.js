@@ -1,9 +1,14 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import PhotoGallery from '@/components/PhotoGallery'
 import BookingButton from '@/components/BookingButton'
+
+export const metadata = {
+  title: 'Birch House — Boutique Hotel on Fort Lauderdale Beach',
+  description: 'A private boutique residence with five luxury suites on Fort Lauderdale Beach. From the creators of The Pillars Hotel & Club.',
+  alternates: { canonical: 'https://birchhouseclub.com' },
+}
 
 const previews = [
   {
@@ -57,10 +62,11 @@ export default function Home() {
           alt="Birch House — Fort Lauderdale Beach"
           fill
           priority
+          sizes="100vw"
           className="hero-img"
           style={{ objectFit: 'cover', objectPosition: 'center 38%' }}
         />
-        <h1 className="sr-only">Birch House</h1>
+        <h1 className="sr-only">Birch House — Boutique Hotel on Fort Lauderdale Beach</h1>
         <div className="scroll-hint">
           <div className="scroll-line" />
         </div>
@@ -97,6 +103,7 @@ export default function Home() {
                 src={p.img}
                 alt={p.title}
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="preview-img"
                 style={{ objectFit: 'cover', objectPosition: p.imgPos }}
               />

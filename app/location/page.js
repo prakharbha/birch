@@ -3,6 +3,12 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import BookingButton from '@/components/BookingButton'
 
+export const metadata = {
+  title: 'Location — Fort Lauderdale Beach',
+  description: 'Birch House is steps from Fort Lauderdale Beach and the Intracoastal marina. 66 S Birch Road, Fort Lauderdale, FL 33316 — 15 minutes from FLL airport.',
+  alternates: { canonical: 'https://birchhouseclub.com/location' },
+}
+
 const highlights = [
   {
     heading: 'The Beach',
@@ -34,6 +40,7 @@ export default function LocationPage() {
           alt="Birch House — Fort Lauderdale Beach"
           fill
           priority
+          sizes="100vw"
           className="hero-img"
           style={{ objectFit: 'cover', objectPosition: 'center 50%' }}
         />
@@ -67,6 +74,7 @@ export default function LocationPage() {
             src="/images/birch_house_hero_16x9.png"
             alt="Birch House exterior"
             fill
+            sizes="(max-width: 768px) 100vw, 50vw"
             className="suites-img"
             style={{ objectFit: 'cover', objectPosition: 'center 38%' }}
           />
@@ -76,9 +84,8 @@ export default function LocationPage() {
             <h2>Find Us</h2>
             <div className="rule" />
             <p>
-              66, S Birch Road<br />
-              Fort Lauderdale<br />
-              Florida, FL 33316
+              66 S Birch Road<br />
+              Fort Lauderdale, FL 33316
             </p>
             <p>
               Two minute walk to the Beach <br />

@@ -2,6 +2,12 @@ import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
+export const metadata = {
+  title: 'The Experience — A Slower Coastal Stay',
+  description: 'Mornings by the coast, unhurried evenings. Discover the Birch House way of staying — intimate, calm, and residential on Fort Lauderdale Beach.',
+  alternates: { canonical: 'https://birchhouseclub.com/experience' },
+}
+
 const moments = [
   {
     time: 'Morning',
@@ -38,6 +44,7 @@ export default function ExperiencePage() {
           alt="The Experience at Birch House"
           fill
           priority
+          sizes="100vw"
           className="hero-img"
           style={{ objectFit: 'cover', objectPosition: 'center 20%' }}
         />
@@ -74,6 +81,7 @@ export default function ExperiencePage() {
               src={m.img}
               alt={m.headline}
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="suites-img"
               style={{ objectFit: 'cover', objectPosition: m.imgPos }}
             />

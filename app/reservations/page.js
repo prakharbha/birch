@@ -4,6 +4,12 @@ import Footer from '@/components/Footer'
 import FaqAccordion from '@/components/FaqAccordion'
 import BookingButton from '@/components/BookingButton'
 
+export const metadata = {
+  title: 'Reservations & Availability',
+  description: 'Reserve one of five luxury suites at Birch House, Fort Lauderdale Beach. Check availability or contact our team directly at +1 (954) 467-9639.',
+  alternates: { canonical: 'https://birchhouseclub.com/reservations' },
+}
+
 const faqs = [
   {
     q: 'How far in advance should I reserve?',
@@ -35,6 +41,7 @@ export default function ReservationsPage() {
           alt="Birch House Reservations"
           fill
           priority
+          sizes="100vw"
           className="hero-img"
           style={{ objectFit: 'cover', objectPosition: 'center 50%' }}
         />
@@ -69,12 +76,7 @@ export default function ReservationsPage() {
             </p>
             <div className="btn-row">
               <BookingButton className="btn btn-filled">Check Availability</BookingButton>
-              <a
-                href="https://pillarshotel.com/birch-house/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-outline"
-              >
+              <a href="/photos" className="btn btn-outline">
                 View Photo Gallery
               </a>
             </div>
@@ -102,9 +104,8 @@ export default function ReservationsPage() {
             <h3>The Address</h3>
             <div className="rule rule--left" />
             <p>
-              66, S Birch Road<br />
-              Fort Lauderdale<br />
-              Florida, FL 33316
+              66 S Birch Road<br />
+              Fort Lauderdale, FL 33316
             </p>
           </div>
         </div>

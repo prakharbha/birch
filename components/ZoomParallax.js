@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import Lightbox from './Lightbox'
 
 // Same slot positions as the original — layout unchanged
@@ -44,11 +45,12 @@ export default function ZoomParallax({ images }) {
               }}
               onClick={() => setLightboxSrc(src)}
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src={src}
                 alt="Birch House"
-                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                fill
+                sizes="(max-width: 1024px) 50vw, 35vw"
+                style={{ objectFit: 'cover' }}
               />
               <div className="desktop-gallery-hover" />
             </div>

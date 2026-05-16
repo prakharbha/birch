@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import Lightbox from './Lightbox'
 
 export default function MobileGallery({ images }) {
@@ -11,8 +12,13 @@ export default function MobileGallery({ images }) {
       <div className="mobile-gallery-grid">
         {images.slice(0, 7).map((src, i) => (
           <div key={i} className="mobile-gallery-item" onClick={() => setLightboxSrc(src)}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={src} alt="Birch House" />
+            <Image
+              src={src}
+              alt="Birch House"
+              fill
+              sizes="(max-width: 768px) 50vw, 33vw"
+              style={{ objectFit: 'cover' }}
+            />
           </div>
         ))}
       </div>
