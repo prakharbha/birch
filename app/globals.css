@@ -1213,6 +1213,15 @@ footer p {
 @media (max-width: 1024px) {
   .nav { display: none; }
   .hamburger { display: flex; }
+  header {
+    background: #ffffff;
+  }
+  header.scrolled {
+    background: #ffffff;
+  }
+  .hamburger .bar {
+    background: #000000;
+  }
 }
 
 /* ─── Full-screen overlay menu ───────────────────────────────── */
