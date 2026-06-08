@@ -79,12 +79,12 @@ header.scrolled {
 
 .nav-link {
   font-family: var(--sans);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 17px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(0, 0, 0, 1);
   transition: color 0.2s;
 }
 
