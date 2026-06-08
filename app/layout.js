@@ -59,7 +59,7 @@ const jsonLd = {
   name: 'Birch House',
   alternateName: 'The Club at Birch House',
   url: 'https://birchhouseclub.com',
-  logo: 'https://birchhouseclub.com/images/Birch-House-Logo-Aqua.webp',
+  logo: 'https://birchhouseclub.com/images/official-birch-house-logo.webp',
   image: 'https://birchhouseclub.com/images/birch_house_hero_16x9.png',
   description:
     'A boutique coastal residence with five luxury suites on Fort Lauderdale Beach, from the creators of The Pillars Hotel & Club.',
