@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import PhotosGrid from '@/components/PhotosGrid'
 
 export const metadata = {
   title: 'Photo Gallery',
@@ -77,26 +78,7 @@ export default function PhotosPage() {
       </section>
 
       {/* ── MASONRY GRID ─────────────────────────────────────── */}
-      <section className="photos-grid-section">
-        <div className="photos-grid">
-          {allPhotos.map((photo, i) => (
-            <div
-              key={photo.src}
-              className={`photo-item ${i % 7 === 0 || i % 7 === 4 ? 'photo-item--tall' : ''}`}
-            >
-              <div className="photo-item-inner">
-                <Image
-                  src={photo.src}
-                  alt={photo.alt}
-                  fill
-                  className="photo-img"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <PhotosGrid photos={allPhotos} />
 
       {/* ── CTA ──────────────────────────────────────────────── */}
       <section className="page-cta">

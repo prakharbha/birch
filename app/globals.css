@@ -1107,7 +1107,7 @@ footer p {
   }
   
   /* Hide zoom parallax gallery on mobile */
-  .zoom-sticky {
+  .desktop-gallery {
     display: none;
   }
 }
@@ -1134,6 +1134,7 @@ footer p {
 .photo-item {
   overflow: hidden;
   position: relative;
+  cursor: pointer;
 }
 
 .photo-item--tall {
