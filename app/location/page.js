@@ -5,7 +5,7 @@ import BookingButton from '@/components/BookingButton'
 
 export const metadata = {
   title: 'Location — Fort Lauderdale Beach',
-  description: 'Birch House is steps from Fort Lauderdale Beach and the Intracoastal marina. 66 S Birch Road, Fort Lauderdale, FL 33316 — 15 minutes from FLL airport.',
+  description: 'Birch House is two minutes from Fort Lauderdale Beach and Las Olas Marina. 66 S Birch Road, Fort Lauderdale, FL 33316 — approximately 15 minutes by car from FLL.',
   alternates: { canonical: 'https://birchhouseclub.com/location' },
 }
 
@@ -20,11 +20,11 @@ const highlights = [
   },
   {
     heading: 'The City',
-    body: 'Restaurants, shops, and the wider life of Fort Lauderdale are all within easy reach. Las Olas Boulevard, with its independent restaurants and galleries, is a short drive. The airport is twenty minutes.',
+    body: 'Restaurants, shops, and the wider life of Fort Lauderdale are all within easy reach. Las Olas Boulevard, with its independent restaurants and galleries, is a short drive. Fort Lauderdale-Hollywood International Airport is approximately 15 minutes by car, depending on traffic.',
   },
   {
     heading: 'The House',
-    body: 'Despite its proximity to everything, Birch House itself remains calm and discrete. The property sits set back, behind its gates and gardens, offering a genuine sense of remove.',
+    body: 'Despite its proximity to everything, Birch House itself remains calm and discreet. The property sits set back, behind its gates and gardens, offering a genuine sense of remove.',
   },
 ]
 
@@ -88,9 +88,10 @@ export default function LocationPage() {
               Fort Lauderdale, FL 33316
             </p>
             <p>
-              Two minute walk to the Beach <br />
-              Two minutes walk to Las Olas Marina <br />
-              Fifteen minutes drive from Fort Lauderdale International Airport
+              Two minutes to Fort Lauderdale Beach <br />
+              Two minutes to Las Olas Marina <br />
+              Approximately 15 minutes by car from Fort Lauderdale-Hollywood
+              International Airport, depending on traffic
             </p>
           </div>
         </div>

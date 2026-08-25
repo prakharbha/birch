@@ -5,8 +5,8 @@ import PhotoGallery from '@/components/PhotoGallery'
 import BookingButton from '@/components/BookingButton'
 
 export const metadata = {
-  title: 'Birch House — Boutique Hotel on Fort Lauderdale Beach',
-  description: 'A private boutique residence with five luxury suites on Fort Lauderdale Beach. From the creators of The Pillars Hotel & Club.',
+  title: 'Private Five-Suite Retreat | Birch House Fort Lauderdale',
+  description: 'A private coastal residence with just five unusually spacious suites, steps from Fort Lauderdale Beach and Las Olas Marina. Understated luxury and highly personal service.',
   alternates: { canonical: 'https://birchhouseclub.com' },
 }
 
@@ -50,6 +50,29 @@ const previews = [
   },
 ]
 
+const proofPoints = [
+  {
+    title: 'Only five suites',
+    body: 'Privacy and personal attention by design.',
+  },
+  {
+    title: 'Unusually generous space',
+    body: 'Approximately 525 to 1,150 sq ft.',
+  },
+  {
+    title: 'A private-house atmosphere',
+    body: 'A quiet garden, a pool, and places to linger.',
+  },
+  {
+    title: 'Beach and marina location',
+    body: 'Two minutes from both Fort Lauderdale Beach and Las Olas Marina.',
+  },
+  {
+    title: 'A recognized hospitality lineage',
+    body: 'From the same ownership that created The Pillars Hotel.',
+  },
+]
+
 export default function Home() {
   return (
     <>
@@ -66,7 +89,19 @@ export default function Home() {
           className="hero-img"
           style={{ objectFit: 'cover', objectPosition: 'center 38%' }}
         />
-        <h1 className="sr-only">Birch House — Boutique Hotel on Fort Lauderdale Beach</h1>
+        <div className="hero-veil" />
+        <div className="hero-text">
+          <span className="page-hero-label">The Club at Birch House</span>
+          <h1>A Private Coastal Residence in Fort Lauderdale</h1>
+          <span className="hero-sub">
+            Five exceptionally spacious suites. A quiet pool and garden. Highly
+            personal service, steps from the beach and Las Olas Marina.
+          </span>
+          <div className="btn-row hero-btn-row">
+            <BookingButton className="btn btn-filled">Check Availability</BookingButton>
+            <a href="/suites" className="btn btn-outline">Explore the Suites</a>
+          </div>
+        </div>
         <div className="scroll-hint">
           <div className="scroll-line" />
         </div>
@@ -78,17 +113,29 @@ export default function Home() {
           <h2>A Different Kind of Stay</h2>
           <div className="rule" />
           <p>
-            The Club at Birch House is not a hotel in the traditional sense. It is a
-            small coastal residence with just five suites, designed to feel relaxed,
-            elegant, and quietly personal.
+            Birch House is not a hotel in the traditional sense. It is a private coastal
+            residence with just five suites, created for guests who value space, calm
+            and personal attention. Each stay has the ease of a private home, with Fort
+            Lauderdale Beach and Las Olas Marina only moments away.
           </p>
           <p>
-            For more than two decades, The Pillars Hotel was known for its understated
-            luxury and personal service. Birch House continues that philosophy in a
-            more private and residential form, for those who prefer intimacy over
-            scale, and discretion over display.
+            From the same ownership that created The Pillars Hotel, known for more than
+            two decades for understated luxury and deeply personal service, Birch House
+            carries that philosophy forward in a smaller, more residential form.
           </p>
         </div>
+      </section>
+
+      {/* ── PROOF POINTS ─────────────────────────────────────── */}
+      <section className="proof-section">
+        <ul className="proof-grid">
+          {proofPoints.map(pt => (
+            <li key={pt.title} className="proof-item">
+              <h3>{pt.title}</h3>
+              <p>{pt.body}</p>
+            </li>
+          ))}
+        </ul>
       </section>
 
       {/* ── PHOTO GALLERY ────────────────────────────────────── */}
@@ -120,6 +167,20 @@ export default function Home() {
             </div>
           </article>
         ))}
+      </section>
+
+      {/* ── CLUB STATUS (pre-opening) ────────────────────────── */}
+      <section className="club-note">
+        <div className="prose">
+          <span className="preview-label">The Club, Arriving This Fall</span>
+          <div className="rule" />
+          <p>
+            Later this year, the residence will be joined by The Club at Birch House:
+            an intimate private club with dining, a lounge and bar, poolside hospitality
+            and a carefully limited membership. Hotel guests will be welcomed into the
+            club experience once it opens.
+          </p>
+        </div>
       </section>
 
       {/* ── FOOTER ───────────────────────────────────────────── */}

@@ -25,9 +25,27 @@ const faqs = [
   },
   {
     q: 'Can the house be reserved exclusively?',
-    a: 'Exclusive use of all five suites can be arranged for private groups or events. Please contact us directly to discuss.',
+    a: 'Exclusive use of all five suites is available on request, for families, yachting parties, wedding groups and executive retreats. Please contact us directly to discuss arrangements and rates.',
+  },
+  {
+    q: 'Is there an advantage to reserving directly?',
+    a: 'Yes. The best available terms and the most personal assistance are always available when reserving directly with us, by telephone, by email, or through the availability calendar on this page.',
+  },
+  {
+    q: 'Is the private club open to guests?',
+    a: 'The Club at Birch House is arriving later this year. Until it opens, the residence and its five suites are available as normal; club dining, lounge and membership services are not yet operating.',
   },
 ]
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(f => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+}
 
 export default function ReservationsPage() {
   return (
@@ -132,6 +150,11 @@ export default function ReservationsPage() {
       </section>
 
       <Footer />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
     </>
   )
 }

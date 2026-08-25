@@ -3,38 +3,13 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import SuiteGallery from '@/components/SuiteGallery'
 import BookingButton from '@/components/BookingButton'
+import { suites } from './suitesData'
 
 export const metadata = {
   title: 'The Suites — Junior & One-Bedroom',
-  description: 'Five generously scaled suites, 525–1,150 sq ft, steps from Fort Lauderdale Beach. View Junior and One-Bedroom suite options at Birch House.',
+  description: 'Five unusually spacious suites of approximately 525 to 1,150 sq ft, steps from Fort Lauderdale Beach and Las Olas Marina. View the Junior and One-Bedroom Suites at Birch House.',
   alternates: { canonical: 'https://birchhouseclub.com/suites' },
 }
-
-const suites = [
-  {
-    name: 'Junior Suite',
-    detail: 'Three available · At 525 sq ft',
-    desc: 'Open, light-filled rooms designed for comfort and ease. Each junior suite offers a generous living area, oversized windows, and a refined bathroom with a glass-enclosed shower and soaking tub. An ADA-accessible option is available.',
-    images: [
-      { src: '/images/jr-hero.jpg', alt: 'Junior Suite',          pos: 'center' },
-      { src: '/images/jr-1.jpg',    alt: 'Junior Suite bedroom',  pos: 'center' },
-      { src: '/images/jr-2.jpg',    alt: 'Junior Suite bathroom', pos: 'center' },
-      { src: '/images/jr-3.jpg',    alt: 'Junior Suite detail',   pos: 'center' },
-    ],
-  },
-  {
-    name: 'One-Bedroom Suite',
-    detail: 'Two available · At 1,150 sq ft',
-    desc: 'The largest accommodation at Birch House. A full separate bedroom, expansive living room, and a spa-like bathroom with freestanding bathtub and walk-in shower, a true residential experience.',
-    images: [
-      { src: '/images/gs-hero.jpg', alt: 'One-Bedroom Suite',          pos: 'center' },
-      { src: '/images/gs-1.jpg',    alt: 'One-Bedroom Suite bedroom',  pos: 'center' },
-      { src: '/images/gs-2.jpg',    alt: 'One-Bedroom Suite salon',    pos: 'center' },
-      { src: '/images/gs-3.jpg',    alt: 'One-Bedroom Suite bathroom', pos: 'center' },
-      { src: '/images/gs-4.jpg',    alt: 'One-Bedroom Suite detail',   pos: 'center' },
-    ],
-  },
-]
 
 export default function SuitesPage() {
   return (
@@ -74,7 +49,7 @@ export default function SuitesPage() {
             create a sense of openness and calm.
           </p>
           <p>
-            With only five suites, the experience remains personal and discrete. This is
+            With only five suites, the experience remains personal and discreet. This is
             not a place of crowds or corridors.
           </p>
         </div>
@@ -84,6 +59,36 @@ export default function SuitesPage() {
       {suites.map((suite, i) => (
         <SuiteGallery key={suite.name} suite={suite} reverse={i % 2 === 1} btnClass={`b${i + 1}`} />
       ))}
+
+      {/* ── WHAT YOUR STAY INCLUDES ──────────────────────────── */}
+      <section className="stay-includes">
+        <div className="prose" style={{ marginBottom: '48px' }}>
+          <h2>What Your Stay Includes</h2>
+          <div className="rule" />
+        </div>
+        <div className="stay-includes-grid">
+          {suites.map(suite => (
+            <div key={suite.slug} className="stay-includes-col">
+              <h3>{suite.name}</h3>
+              <span className="suite-detail">{suite.size}</span>
+              <dl className="stay-list">
+                {suite.stay.map(([term, value]) => (
+                  <div key={term} className="stay-list-row">
+                    <dt>{term}</dt>
+                    <dd>{value}</dd>
+                  </div>
+                ))}
+              </dl>
+              <a href={`/suites/${suite.slug}`} className="tlink">View the {suite.name}</a>
+            </div>
+          ))}
+        </div>
+        <p className="stay-includes-note">
+          Cancellation terms are shown with your rate before you confirm. For extended
+          stays, exclusive use of all five suites, or any special arrangement, please
+          contact us directly.
+        </p>
+      </section>
 
       {/* ── BATHROOM FEATURE ─────────────────────────────────── */}
       <section className="feature-full">

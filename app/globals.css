@@ -123,12 +123,15 @@ header.scrolled {
 .hero-veil {
   position: absolute;
   inset: 0;
+  /* The hero photograph is bright and busy at the bottom, where the headline,
+     subhead and buttons sit — this band carries their contrast. */
   background: linear-gradient(
     to bottom,
-    rgba(10, 6, 2, 0.06) 0%,
-    rgba(10, 6, 2, 0.00) 38%,
-    rgba(10, 6, 2, 0.48) 72%,
-    rgba(10, 6, 2, 0.70) 100%
+    rgba(10, 6, 2, 0.10) 0%,
+    rgba(10, 6, 2, 0.00) 30%,
+    rgba(10, 6, 2, 0.42) 52%,
+    rgba(10, 6, 2, 0.72) 74%,
+    rgba(10, 6, 2, 0.86) 100%
   );
 }
 
@@ -1505,4 +1508,238 @@ footer p {
   .mobile-nav-link {
     font-size: clamp(28px, 9vw, 48px);
   }
+}
+
+/* ─── Home hero text ─────────────────────────────────────────── */
+/* The home hero sits over photography, so the shared .btn palette
+   (dark ink on light ground) is inverted to read against the image. */
+.hero-btn-row {
+  margin-top: 34px;
+}
+
+.hero-btn-row .btn-filled {
+  background: var(--cream);
+  border-color: var(--cream);
+  color: #000000;
+}
+
+.hero-btn-row .btn-filled:hover {
+  background: transparent;
+  color: var(--cream);
+}
+
+.hero-btn-row .btn-outline {
+  border-color: rgba(242, 235, 224, 0.7);
+  color: var(--cream);
+}
+
+.hero-btn-row .btn-outline:hover {
+  background: var(--cream);
+  border-color: var(--cream);
+  color: #000000;
+}
+
+.hero .hero-text {
+  padding: 0 48px;
+}
+
+.hero .hero-sub {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+/* ─── Proof points ───────────────────────────────────────────── */
+.proof-section {
+  padding: 0 48px 100px;
+}
+
+.proof-grid {
+  list-style: none;
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+  border-top: 1px solid var(--rule);
+  padding-top: 48px;
+}
+
+.proof-item h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.proof-item p {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 1.6;
+  opacity: 0.78;
+}
+
+/* ─── Club status note (pre-opening) ─────────────────────────── */
+.club-note {
+  padding: 96px 48px;
+  border-top: 1px solid var(--rule);
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .proof-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero .hero-text {
+    bottom: 11%;
+    padding: 0 24px;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(30px, 8vw, 44px);
+  }
+
+  .hero .hero-sub {
+    font-size: 18px;
+  }
+
+  .hero-btn-row {
+    margin-top: 26px;
+    gap: 10px;
+  }
+
+  .hero-btn-row .btn {
+    padding: 10px 22px;
+    font-size: 15px;
+  }
+
+  .proof-section {
+    padding: 0 24px 72px;
+  }
+
+  .proof-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-top: 36px;
+  }
+
+  .club-note {
+    padding: 72px 24px;
+  }
+}
+
+/* ─── Suite actions (Reserve + details link) ─────────────────── */
+.suite-actions {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* ─── What your stay includes ────────────────────────────────── */
+.stay-includes {
+  padding: 100px 48px;
+  border-top: 1px solid var(--rule);
+}
+
+.stay-includes-grid {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 64px;
+}
+
+.stay-includes-grid--single {
+  grid-template-columns: 1fr;
+  max-width: 720px;
+}
+
+.stay-includes-col h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 30px;
+  margin-bottom: 6px;
+}
+
+.stay-list {
+  margin: 24px 0 28px;
+  border-top: 1px solid var(--rule);
+}
+
+.stay-list-row {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 20px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(138, 120, 101, 0.28);
+}
+
+.stay-list-row dt {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 15px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  line-height: 1.6;
+}
+
+.stay-list-row dd {
+  font-family: var(--serif);
+  font-size: 20px;
+  line-height: 1.55;
+}
+
+.stay-includes-note {
+  max-width: 1120px;
+  margin: 56px auto 0;
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 1.7;
+  opacity: 0.72;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .stay-includes {
+    padding: 72px 24px;
+  }
+
+  .stay-includes-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .stay-list-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .stay-list-row dd {
+    font-size: 19px;
+  }
+
+  .suite-actions {
+    gap: 20px;
+  }
+}
+
+/* Hero type sits on photography — hold contrast even on the lightest frames. */
+.hero .hero-text h1,
+.hero .hero-sub {
+  text-shadow: 0 1px 18px rgba(10, 6, 2, 0.55);
+}
+
+.hero .page-hero-label {
+  color: rgba(242, 235, 224, 0.92);
+  text-shadow: 0 1px 14px rgba(10, 6, 2, 0.6);
 }
