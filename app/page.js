@@ -80,15 +80,19 @@ export default function Home() {
 
       {/* ── HERO ─────────────────────────────────────────────── */}
       <section className="hero" id="home">
-        <Image
-          src="/images/birch_house_hero_16x9.png"
-          alt="Birch House — Fort Lauderdale Beach"
-          fill
-          priority
-          sizes="100vw"
-          className="hero-img"
-          style={{ objectFit: 'cover', objectPosition: 'center 38%' }}
-        />
+        <video
+          className="hero-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          poster="/videos/hero-poster.jpg"
+          aria-hidden="true"
+        >
+          <source src="/videos/hero-720.mp4" type="video/mp4" media="(max-width: 900px)" />
+          <source src="/videos/hero-1080.mp4" type="video/mp4" />
+        </video>
         <div className="hero-veil" />
         <div className="hero-text">
           <span className="page-hero-label">The Club at Birch House</span>
