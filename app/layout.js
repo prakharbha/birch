@@ -1,6 +1,8 @@
 import { Cormorant_Garamond, Jost } from 'next/font/google'
 import './globals.css'
 import PillarsBanner from '../components/PillarsBanner'
+import BookBar from '../components/BookBar'
+import { BOOK_BAR_KEY } from '../lib/bookBar'
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -94,8 +96,17 @@ const jsonLd = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${jost.variable}`}>
+    <html lang="en" className={`${cormorant.variable} ${jost.variable}`} suppressHydrationWarning>
+      <head>
+        {/* Hide the book bar before first paint if this visitor has closed it before. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{if(localStorage.getItem('${BOOK_BAR_KEY}'))document.documentElement.dataset.bookBar='off'}catch(e){}`,
+          }}
+        />
+      </head>
       <body>
+        <BookBar />
         <PillarsBanner />
         {children}
 

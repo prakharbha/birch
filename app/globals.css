@@ -1506,3 +1506,108 @@ footer p {
     font-size: clamp(28px, 9vw, 48px);
   }
 }
+
+/* ─── Book bar (The Art of Welcome) ──────────────────────────── */
+/* A slim bar above the fixed header; the header and page move down by its height.
+   Closing it (or a past close, read before paint in layout.js) sets html[data-book-bar="off"]. */
+:root {
+  --book-bar-h: 44px;
+}
+
+html[data-book-bar="off"] {
+  --book-bar-h: 0px;
+}
+
+html[data-book-bar="off"] .book-bar {
+  display: none;
+}
+
+body {
+  padding-top: var(--book-bar-h);
+}
+
+header {
+  top: var(--book-bar-h);
+}
+
+.book-bar {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 210; /* above the header (200), below the mobile menu (250) and lightbox */
+  height: var(--book-bar-h);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 52px;
+  background: #72b3a3; /* the front door's sea green in the hero painting; black text is 8.7:1 */
+  color: #000000;
+}
+
+.book-bar__text {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 19px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.book-bar__link {
+  color: inherit;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.book-bar__link:hover {
+  text-decoration-thickness: 2px;
+}
+
+.book-bar__close {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  color: inherit;
+  font-family: var(--sans);
+  font-size: 28px;
+  font-weight: 200;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.book-bar__close:hover {
+  opacity: 1;
+}
+
+/* Phones: a taller bar so the line can wrap to two rows and the link is never cut off. */
+@media (max-width: 768px) {
+  :root {
+    --book-bar-h: 60px;
+  }
+
+  .book-bar {
+    padding: 0 48px 0 16px;
+  }
+
+  .book-bar__text {
+    font-size: 17px;
+    white-space: normal;
+  }
+
+  .book-bar__long {
+    display: none;
+  }
+}
