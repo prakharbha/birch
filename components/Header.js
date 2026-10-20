@@ -36,7 +36,7 @@ export default function Header() {
       <header className={scrolled ? 'scrolled' : ''}>
         <Link href="/" onClick={close} aria-label="Birch House — Home" style={{ flexShrink: 0, lineHeight: 0 }}>
           <Image
-            src="/images/official-birch-house-logo.webp"
+            src="/images/official-birch-house-logo.avif"
             alt="Birch House"
             height={88}
             width={220}

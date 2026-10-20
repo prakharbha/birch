@@ -13,7 +13,7 @@ export const metadata = {
 const previews = [
   {
     href: '/suites',
-    img: '/images/Birch-House-Grand-Suite.jpg',
+    img: '/images/Birch-House-Grand-Suite.avif',
     imgPos: 'center 30%',
     label: 'Accommodation',
     title: 'The Suites',
@@ -22,7 +22,7 @@ const previews = [
   },
   {
     href: '/experience',
-    img: '/images/morning.webp',
+    img: '/images/morning.avif',
     imgPos: 'center 30%',
     label: 'Your Stay',
     title: 'The Experience',
@@ -31,7 +31,7 @@ const previews = [
   },
   {
     href: '/location',
-    img: '/images/beach-sand-road.webp',
+    img: '/images/beach-sand-road.avif',
     imgPos: 'center 50%',
     label: 'Fort Lauderdale Beach',
     title: 'The Location',
@@ -40,7 +40,7 @@ const previews = [
   },
   {
     href: '/reservations',
-    img: '/images/Tranquil-poolside-relaxation-area.webp',
+    img: '/images/Tranquil-poolside-relaxation-area.avif',
     imgPos: 'center 50%',
     label: 'Availability',
     title: 'Reservations',
@@ -87,7 +87,7 @@ export default function Home() {
           loop
           playsInline
           preload="auto"
-          poster="/videos/hero-poster.jpg"
+          poster="/videos/hero-poster.avif"
           aria-hidden="true"
         >
           <source src="/videos/hero-720.mp4" type="video/mp4" media="(max-width: 900px)" />

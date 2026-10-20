@@ -8,13 +8,13 @@ const ZoomParallax = dynamic(() => import('./ZoomParallax'), { ssr: false })
 
 // 7 images for the zoom parallax slots — local Birch House photography
 const parallaxImages = [
-  '/images/birch-05.jpg',
-  '/images/birch-06.jpg',
-  '/images/birch-10.jpg',
-  '/images/birch-12.jpg',
-  '/images/birch-16.jpg',
-  '/images/birch-18.jpg',
-  '/images/birch-20.jpg',
+  '/images/birch-05.avif',
+  '/images/birch-06.avif',
+  '/images/birch-10.avif',
+  '/images/birch-12.avif',
+  '/images/birch-16.avif',
+  '/images/birch-18.avif',
+  '/images/birch-20.avif',
 ]
 
 export default function PhotoGallery() {

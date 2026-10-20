@@ -19,7 +19,7 @@ export default function SuitesPage() {
       {/* ── PAGE HERO ───────────────────────────────────────── */}
       <section className="page-hero">
         <Image
-          src="/images/gs-hero.jpg"
+          src="/images/gs-hero.avif"
           alt="The Suites at Birch House"
           fill
           priority
@@ -94,7 +94,7 @@ export default function SuitesPage() {
       <section className="feature-full">
         <div className="feature-full-img-wrap">
           <Image
-            src="/images/Birch-House batroom.jpg"
+            src="/images/Birch-House batroom.avif"
             alt="Birch House bathroom"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"

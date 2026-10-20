@@ -23,10 +23,10 @@ export const suites = [
       ['Parking', 'On-site parking available'],
     ],
     images: [
-      { src: '/images/jr-hero.jpg', alt: 'Junior Suite',          pos: 'center' },
-      { src: '/images/jr-1.jpg',    alt: 'Junior Suite bedroom',  pos: 'center' },
-      { src: '/images/jr-2.jpg',    alt: 'Junior Suite bathroom', pos: 'center' },
-      { src: '/images/jr-3.jpg',    alt: 'Junior Suite detail',   pos: 'center' },
+      { src: '/images/jr-hero.avif', alt: 'Junior Suite',          pos: 'center' },
+      { src: '/images/jr-1.avif',    alt: 'Junior Suite bedroom',  pos: 'center' },
+      { src: '/images/jr-2.avif',    alt: 'Junior Suite bathroom', pos: 'center' },
+      { src: '/images/jr-3.avif',    alt: 'Junior Suite detail',   pos: 'center' },
     ],
   },
   {
@@ -48,11 +48,11 @@ export const suites = [
       ['Parking', 'On-site parking available'],
     ],
     images: [
-      { src: '/images/gs-hero.jpg', alt: 'One-Bedroom Suite',          pos: 'center' },
-      { src: '/images/gs-1.jpg',    alt: 'One-Bedroom Suite bedroom',  pos: 'center' },
-      { src: '/images/gs-2.jpg',    alt: 'One-Bedroom Suite salon',    pos: 'center' },
-      { src: '/images/gs-3.jpg',    alt: 'One-Bedroom Suite bathroom', pos: 'center' },
-      { src: '/images/gs-4.jpg',    alt: 'One-Bedroom Suite detail',   pos: 'center' },
+      { src: '/images/gs-hero.avif', alt: 'One-Bedroom Suite',          pos: 'center' },
+      { src: '/images/gs-1.avif',    alt: 'One-Bedroom Suite bedroom',  pos: 'center' },
+      { src: '/images/gs-2.avif',    alt: 'One-Bedroom Suite salon',    pos: 'center' },
+      { src: '/images/gs-3.avif',    alt: 'One-Bedroom Suite bathroom', pos: 'center' },
+      { src: '/images/gs-4.avif',    alt: 'One-Bedroom Suite detail',   pos: 'center' },
     ],
   },
 ]

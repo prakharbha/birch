@@ -55,7 +55,7 @@ export default function ReservationsPage() {
       {/* ── PAGE HERO ───────────────────────────────────────── */}
       <section className="page-hero">
         <Image
-          src="/images/Tranquil-poolside-relaxation-area.webp"
+          src="/images/Tranquil-poolside-relaxation-area.avif"
           alt="Birch House Reservations"
           fill
           priority

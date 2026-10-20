@@ -36,7 +36,7 @@ export default function LocationPage() {
       {/* ── PAGE HERO ───────────────────────────────────────── */}
       <section className="page-hero">
         <Image
-          src="/images/beach-sand-road.webp"
+          src="/images/beach-sand-road.avif"
           alt="Birch House — Fort Lauderdale Beach"
           fill
           priority
@@ -71,7 +71,7 @@ export default function LocationPage() {
       <section className="location-feature">
         <div className="location-feature-img">
           <Image
-            src="/images/birch_house_hero_16x9.png"
+            src="/images/birch_house_hero_16x9.avif"
             alt="Birch House exterior"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"

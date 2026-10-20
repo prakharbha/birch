@@ -13,34 +13,34 @@ export const metadata = {
 // All Birch House photos — local files downloaded from pillarshotel.com/birch-house/
 // plus existing on-property photography
 const allPhotos = [
-  { src: '/images/birch-01.jpg',                  alt: 'Birch House entrance and gardens, Fort Lauderdale Beach' },
-  { src: '/images/birch-02.jpg',                  alt: 'Birch House exterior facade' },
-  { src: '/images/birch-03.jpg',                  alt: 'Birch House poolside terrace' },
-  { src: '/images/birch-04.jpg',                  alt: 'Suite interior at Birch House Fort Lauderdale' },
-  { src: '/images/birch-05.jpg',                  alt: 'Birch House suite living area' },
-  { src: '/images/birch-06.jpg',                  alt: 'Birch House suite bedroom' },
-  { src: '/images/birch-07.jpg',                  alt: 'Suite bathroom at Birch House' },
-  { src: '/images/birch-08.jpg',                  alt: 'Birch House outdoor pool area' },
-  { src: '/images/birch-09.jpg',                  alt: 'Birch House garden and grounds' },
-  { src: '/images/birch-10.jpg',                  alt: 'Birch House common areas and lounge' },
-  { src: '/images/birch-11.jpg',                  alt: 'Birch House suite detail, Fort Lauderdale' },
-  { src: '/images/birch-12.jpg',                  alt: 'Birch House coastal setting, Fort Lauderdale Beach' },
-  { src: '/images/birch-13.jpg',                  alt: 'Birch House suite with natural light' },
-  { src: '/images/birch-14.jpg',                  alt: 'Birch House property exterior at dusk' },
-  { src: '/images/birch-15.jpg',                  alt: 'One-Bedroom Suite at Birch House Fort Lauderdale' },
-  { src: '/images/birch-16.jpg',                  alt: 'Birch House suite bathroom with soaking tub' },
-  { src: '/images/birch-17.jpg',                  alt: 'Birch House pool and garden view' },
-  { src: '/images/birch-18.jpg',                  alt: 'Junior Suite at Birch House Fort Lauderdale Beach' },
-  { src: '/images/birch-19.jpg',                  alt: 'Birch House tropical courtyard' },
-  { src: '/images/Canal-walkway-in-Fort-Lauderdale.webp',      alt: 'Canal walkway, Fort Lauderdale' },
-  { src: '/images/a1a-night.webp',                             alt: 'A1A at night' },
-  { src: '/images/beach-sand-road.webp',                       alt: 'Fort Lauderdale Beach' },
-  { src: '/images/Tranquil-poolside-relaxation-area.webp',    alt: 'Birch House pool' },
-  { src: '/images/birch_house_hero_16x9.png',                 alt: 'Birch House exterior' },
-  { src: '/images/flowers gate.jpg',              alt: 'Entrance gate and garden' },
-  { src: '/images/Birch-House-Grand-Suite.jpg',   alt: 'Grand Suite' },
-  { src: '/images/bedroom birch house.jpg',       alt: 'Suite bedroom' },
-  { src: '/images/Birch-House batroom.jpg',       alt: 'Suite bathroom' },
+  { src: '/images/birch-01.avif',                  alt: 'Birch House entrance and gardens, Fort Lauderdale Beach' },
+  { src: '/images/birch-02.avif',                  alt: 'Birch House exterior facade' },
+  { src: '/images/birch-03.avif',                  alt: 'Birch House poolside terrace' },
+  { src: '/images/birch-04.avif',                  alt: 'Suite interior at Birch House Fort Lauderdale' },
+  { src: '/images/birch-05.avif',                  alt: 'Birch House suite living area' },
+  { src: '/images/birch-06.avif',                  alt: 'Birch House suite bedroom' },
+  { src: '/images/birch-07.avif',                  alt: 'Suite bathroom at Birch House' },
+  { src: '/images/birch-08.avif',                  alt: 'Birch House outdoor pool area' },
+  { src: '/images/birch-09.avif',                  alt: 'Birch House garden and grounds' },
+  { src: '/images/birch-10.avif',                  alt: 'Birch House common areas and lounge' },
+  { src: '/images/birch-11.avif',                  alt: 'Birch House suite detail, Fort Lauderdale' },
+  { src: '/images/birch-12.avif',                  alt: 'Birch House coastal setting, Fort Lauderdale Beach' },
+  { src: '/images/birch-13.avif',                  alt: 'Birch House suite with natural light' },
+  { src: '/images/birch-14.avif',                  alt: 'Birch House property exterior at dusk' },
+  { src: '/images/birch-15.avif',                  alt: 'One-Bedroom Suite at Birch House Fort Lauderdale' },
+  { src: '/images/birch-16.avif',                  alt: 'Birch House suite bathroom with soaking tub' },
+  { src: '/images/birch-17.avif',                  alt: 'Birch House pool and garden view' },
+  { src: '/images/birch-18.avif',                  alt: 'Junior Suite at Birch House Fort Lauderdale Beach' },
+  { src: '/images/birch-19.avif',                  alt: 'Birch House tropical courtyard' },
+  { src: '/images/Canal-walkway-in-Fort-Lauderdale.avif',      alt: 'Canal walkway, Fort Lauderdale' },
+  { src: '/images/a1a-night.avif',                             alt: 'A1A at night' },
+  { src: '/images/beach-sand-road.avif',                       alt: 'Fort Lauderdale Beach' },
+  { src: '/images/Tranquil-poolside-relaxation-area.avif',    alt: 'Birch House pool' },
+  { src: '/images/birch_house_hero_16x9.avif',                alt: 'Birch House exterior' },
+  { src: '/images/flowers gate.avif',              alt: 'Entrance gate and garden' },
+  { src: '/images/Birch-House-Grand-Suite.avif',   alt: 'Grand Suite' },
+  { src: '/images/bedroom birch house.avif',       alt: 'Suite bedroom' },
+  { src: '/images/Birch-House batroom.avif',       alt: 'Suite bathroom' },
 ]
 
 export default function PhotosPage() {
@@ -51,7 +51,7 @@ export default function PhotosPage() {
       {/* ── PAGE HERO ───────────────────────────────────────── */}
       <section className="page-hero">
         <Image
-          src="/images/birch_house_hero_16x9.png"
+          src="/images/birch_house_hero_16x9.avif"
           alt="Birch House Photography"
           fill
           priority

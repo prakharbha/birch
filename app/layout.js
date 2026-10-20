@@ -38,9 +38,10 @@ export const metadata = {
     siteName: 'The Club at Birch House',
     images: [
       {
-        url: '/images/birch_house_hero_16x9.png',
-        width: 1600,
-        height: 900,
+        url: '/images/birch_house_hero_16x9.avif',
+        width: 1536,
+        height: 864,
+        type: 'image/avif',
         alt: 'Birch House — a private coastal residence on Fort Lauderdale Beach',
       },
     ],
@@ -52,7 +53,7 @@ export const metadata = {
     title: 'The Club at Birch House — A Private Coastal Residence in Fort Lauderdale',
     description:
       'Five exceptionally spacious suites. A quiet pool and garden. Highly personal service, steps from the beach and Las Olas Marina.',
-    images: ['/images/birch_house_hero_16x9.png'],
+    images: ['/images/birch_house_hero_16x9.avif'],
   },
 }
 
@@ -63,8 +64,8 @@ const hotelLd = {
   name: 'The Club at Birch House',
   alternateName: 'Birch House',
   url: 'https://birchhouseclub.com',
-  logo: 'https://birchhouseclub.com/images/official-birch-house-logo.webp',
-  image: 'https://birchhouseclub.com/images/birch_house_hero_16x9.png',
+  logo: 'https://birchhouseclub.com/images/official-birch-house-logo.avif',
+  image: 'https://birchhouseclub.com/images/birch_house_hero_16x9.avif',
   description:
     'A private coastal residence with just five unusually spacious suites on Fort Lauderdale Beach, offering understated luxury and highly personal service.',
   numberOfRooms: 5,
@@ -98,7 +99,7 @@ const hotelLd = {
       url: 'https://birchhouseclub.com/suites/junior-suite',
       description:
         'Approximately 525 sq ft, arranged as a calm, light-filled retreat with a generous sitting area and an oversized bathroom.',
-      image: 'https://birchhouseclub.com/images/jr-hero.jpg',
+      image: 'https://birchhouseclub.com/images/jr-hero.avif',
       occupancy: { '@type': 'QuantitativeValue', maxValue: 2 },
       floorSize: { '@type': 'QuantitativeValue', value: 525, unitCode: 'FTK' },
     },
@@ -108,7 +109,7 @@ const hotelLd = {
       url: 'https://birchhouseclub.com/suites/one-bedroom-suite',
       description:
         'Approximately 1,150 sq ft, with a separate bedroom and expansive salon — a true private residence by the coast.',
-      image: 'https://birchhouseclub.com/images/gs-hero.jpg',
+      image: 'https://birchhouseclub.com/images/gs-hero.avif',
       occupancy: { '@type': 'QuantitativeValue', maxValue: 4 },
       floorSize: { '@type': 'QuantitativeValue', value: 1150, unitCode: 'FTK' },
     },
@@ -135,7 +136,7 @@ const organizationLd = {
   '@id': 'https://birchhouseclub.com/#organization',
   name: 'The Club at Birch House',
   url: 'https://birchhouseclub.com',
-  logo: 'https://birchhouseclub.com/images/official-birch-house-logo.webp',
+  logo: 'https://birchhouseclub.com/images/official-birch-house-logo.avif',
   telephone: '+19544679639',
   email: 'guestservices@birchhouseclub.com',
   address: {

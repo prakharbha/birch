@@ -13,21 +13,21 @@ const moments = [
     time: 'Morning',
     headline: 'A Slower Start',
     body: 'Mornings begin slowly, with light from the coast. The option to step out toward the beach is just moments away. There is no schedule, only the rhythm you choose. Coffee brought to the room, or taken on the terrace as the day begins to unfold.',
-    img: '/images/morning.webp',
+    img: '/images/morning.avif',
     imgPos: 'center 30%',
   },
   {
     time: 'Afternoon',
     headline: 'Between the House and the Water',
     body: 'Afternoons move easily between the house, the pool, and the nearby marina. The presence of the water is constant, though never intrusive. The beach is a short walk. The restaurants and shops of Fort Lauderdale.',
-    img: '/images/afternoon.webp',
+    img: '/images/afternoon.avif',
     imgPos: 'center 40%',
   },
   {
     time: 'Evening',
     headline: 'Unhurried Evenings',
     body: 'Evenings are calm and understated. The setting invites conversation, a glass of wine, or simply time to unwind in a space that feels private and removed from the world. There is no performance here, only comfort.',
-    img: '/images/evening.webp',
+    img: '/images/evening.avif',
     imgPos: 'center 40%',
   },
 ]
@@ -40,7 +40,7 @@ export default function ExperiencePage() {
       {/* ── PAGE HERO ───────────────────────────────────────── */}
       <section className="page-hero">
         <Image
-          src="/images/girl on bed birch house.jpg"
+          src="/images/girl on bed birch house.avif"
           alt="The Experience at Birch House"
           fill
           priority

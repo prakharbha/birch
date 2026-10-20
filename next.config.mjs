@@ -11,6 +11,10 @@ const nextConfig = {
     ]
   },
   images: {
+    // Serve AVIF to browsers that accept it, WebP otherwise.
+    formats: ['image/avif', 'image/webp'],
+    // Sources are static and never change in place, so keep optimized copies for a year.
+    minimumCacheTTL: 31536000,
     remotePatterns: [
       {
         protocol: 'https',
