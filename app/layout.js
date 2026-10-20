@@ -1,6 +1,7 @@
 import { Cormorant_Garamond, Jost } from 'next/font/google'
 import './globals.css'
 import PillarsBanner from '../components/PillarsBanner'
+import BookingReturn from '../components/BookingReturn'
 // Book bar temporarily hidden — restore this import, <BookBar /> below, and drop data-book-bar="off" on <html>.
 // import BookBar from '../components/BookBar'
 import { BOOK_BAR_KEY } from '../lib/bookBar'
@@ -176,24 +177,8 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationLd) }}
         />
 
-        {/* Mews Booking Engine (Distributor) */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-(function(m,e,w,s){
-  if(document.getElementById('mews-distributor'))return;
-  var c=m.createElement(e);
-  c.id='mews-distributor';
-  c.onload=function(){ Mews.D.apply(null,s); };
-  c.async=1;
-  c.src=w;
-  var t=m.getElementsByTagName(e)[0];
-  t.parentNode.insertBefore(c,t);
-})(document,'script','https://app.mews.com/distributor/distributor.min.js',[['db6703b3-a9ad-417a-9c41-b1bc0080de44']]);
-`,
-          }}
-        />
-
+        {/* Mews Booking Engine loads on demand from BookingButton (lib/mews.js) */}
+        <BookingReturn />
       </body>
     </html>
   )

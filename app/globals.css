@@ -701,7 +701,7 @@ footer p {
   font-size: 17px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--rule);
+  color: #705F4C; /* a shade darker than --rule so 17px text passes 4.5:1 on --bg */
   margin-bottom: 16px;
 }
 

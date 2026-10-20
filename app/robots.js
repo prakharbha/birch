@@ -4,10 +4,10 @@ export default function robots() {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/_next/'],
+        // /_next/ stays crawlable: Google needs its CSS, JS and images to render the pages.
+        disallow: ['/api/'],
       },
     ],
     sitemap: 'https://birchhouseclub.com/sitemap.xml',
-    host: 'https://birchhouseclub.com',
   }
 }
