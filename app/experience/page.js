@@ -66,9 +66,10 @@ export default function ExperiencePage() {
             by space, quiet, and genuine personal attention.
           </p>
           <p>
-            For more than two decades, The Pillars Hotel was known for its understated luxury
-            and personal service. Birch House continues that philosophy in a more private and
-            residential form, for those who prefer intimacy over scale, and discretion over display.
+            From the same ownership that created The Pillars Hotel, known for more than two
+            decades for understated luxury and deeply personal service, Birch House carries
+            that philosophy forward in a smaller, more residential form, for those who prefer
+            intimacy over scale, and discretion over display.
           </p>
         </div>
       </section>

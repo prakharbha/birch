@@ -49,8 +49,15 @@ export default function SuiteGallery({ suite, reverse, btnClass }) {
         <span className="suite-detail">{suite.detail}</span>
         <h2>{suite.name}</h2>
         <div className="rule rule--left" />
-        <p>{suite.desc}</p>
-        <BookingButton className="tlink">Reserve</BookingButton>
+        <p>{suite.lead || suite.desc}</p>
+        <div className="suite-actions">
+          <BookingButton className="tlink">Reserve</BookingButton>
+          {suite.slug && (
+            <a href={`/suites/${suite.slug}`} className="tlink">
+              Suite Details
+            </a>
+          )}
+        </div>
       </div>
     </article>
   )
