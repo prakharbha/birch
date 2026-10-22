@@ -66,7 +66,8 @@ export default function Header() {
       </header>
 
       {/* Full-screen overlay menu */}
-      <div className={`mobile-menu ${menuOpen ? 'mobile-menu--open' : ''}`} aria-hidden={!menuOpen}>
+      {/* inert while closed: hidden from screen readers and out of the tab order */}
+      <div className={`mobile-menu ${menuOpen ? 'mobile-menu--open' : ''}`} inert={menuOpen ? undefined : ''}>
         {/* Close button */}
         <button className="mobile-menu-close" onClick={close} aria-label="Close menu">
           <span className="close-bar" />
