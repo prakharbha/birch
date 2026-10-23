@@ -2,8 +2,7 @@ import { Cormorant_Garamond, Jost } from 'next/font/google'
 import './globals.css'
 import PillarsBanner from '../components/PillarsBanner'
 import BookingReturn from '../components/BookingReturn'
-// Book bar temporarily hidden — restore this import, <BookBar /> below, and drop data-book-bar="off" on <html>.
-// import BookBar from '../components/BookBar'
+import BookBar from '../components/BookBar'
 import { BOOK_BAR_KEY } from '../lib/bookBar'
 
 const cormorant = Cormorant_Garamond({
@@ -152,7 +151,7 @@ const organizationLd = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${jost.variable}`} data-book-bar="off" suppressHydrationWarning>
+    <html lang="en" className={`${cormorant.variable} ${jost.variable}`} suppressHydrationWarning>
       <head>
         {/* Hide the book bar before first paint if this visitor has closed it before. */}
         <script
@@ -162,8 +161,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        {/* Book bar temporarily hidden — /book itself still works */}
-        {/* <BookBar /> */}
+        <BookBar />
         <PillarsBanner />
         {children}
 
