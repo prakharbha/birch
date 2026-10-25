@@ -21,7 +21,7 @@ export default function Footer() {
       <p style={{ marginTop: '6px', opacity: 0.7 }}>
         From the creators of The Pillars Hotel
       </p>
-      <p style={{ marginTop: '10px', opacity: 0.55, fontSize: '12px' }}>
+      <p style={{ marginTop: '10px', opacity: 0.7, fontSize: '13px', fontWeight: 400 }}>
         Website by{' '}
         <a href="https://www.nandann.com" target="_blank" rel="noopener" style={{ color: 'inherit', textUnderlineOffset: '3px' }}>
           Nandann Creative Agency
